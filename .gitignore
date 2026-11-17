@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node (test harnesses Kiro may add)
+node_modules/
+
+# AI-DLC download leftovers
+ai-dlc-rules-*.zip
+aidlc-rules/
+
+# Secrets and local settings
+.env
+.env.*
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
