@@ -1,26 +1,14 @@
-# kiro-workshop
+# kiro-workshop: AI-DLC with Kiro
 
-Hands-on material for the **Kiro developer workshop** (1:00 – 5:00 PM).
+Hands-on material for the **Kiro AI-DLC workshop** (1:00 – 5:00 PM, 4 hours).
 
-You build the same small **shopping cart API** twice, on your own laptop:
+You build one small **cart API** for a fictional online store, KedaiKu, using the **AI-DLC** methodology in Kiro: Kiro asks questions in files, plans, and waits for your approval at every stage before it builds. The stakeholders do not all agree, so your team decides, records why, and proves the result against an answer key.
 
-1. **`spec-driven/`** – with Kiro's spec workflow (requirements → design → tasks).
-2. **`ai-dlc/`** – with the AI-DLC methodology (Kiro asks, plans, waits for your approval, then builds).
-
-Then you compare the two results side by side.
-
-Everything runs **locally**. There is no cloud deployment in this version of the workshop.
+Everything runs **locally** on your laptop. No cloud account, no database, no Docker.
 
 ## Before the workshop
 
-| You need | Check it with |
-|---|---|
-| Kiro CLI (signed in) | `kiro-cli --version` |
-| Python 3.12 or newer | `python --version` |
-| Git | `git --version` |
-| Git Bash (Windows only) for the AI-DLC install commands | open "Git Bash" |
-
-## Get the workshop
+Do everything in [`Pre-Workshop-Checklist.md`](Pre-Workshop-Checklist.md) at home, on the laptop your team will use.
 
 ```bash
 git clone https://github.com/gdex-waiken/kiro-workshop.git
@@ -31,51 +19,42 @@ cd kiro-workshop
 
 ```
 kiro-workshop/
-├── docs/
-│   ├── user-story.md              # the ticket you build
-│   └── technical-requirements.md  # the rules Kiro must follow
-├── spec-driven/                   # Part 1: start Kiro here
-│   ├── README.md                  # step-by-step guide
-│   └── .kiro/steering/tech.md     # standing rules Kiro reads every session
-└── ai-dlc/                        # Part 2: start Kiro here
-    ├── README.md                  # step-by-step guide
-    └── .kiro/steering/tech.md     # the same standing rules
+├── Pre-Workshop-Checklist.md   # do this 2–3 days before
+├── AI-DLC-Cheat-Sheet.md       # one-page map: stages, gates, rules
+├── spec-demo/                  # facilitator's 10-minute Kiro spec demo (you watch)
+└── ai-dlc/                     # YOUR WORKSPACE: open Kiro here
+    ├── README.md               # step-by-step guide: start here
+    ├── ticket.md               # what Product asked for
+    ├── vision-document.md      # why, for whom, in and out of scope
+    ├── stakeholder-notes.md    # what people said (they disagree)
+    ├── api-contract.md         # the fixed API the mobile app expects
+    ├── technical-environment.md# stack, architecture, prohibitions
+    ├── sample-data/            # product catalog + the answer key
+    ├── check_cart.py           # replays the answer key against your service
+    ├── team-log.md             # you fill in: roles, decisions and why
+    └── traceability-worksheet.md # you fill in: one number traced back to a sentence
 ```
-
-Both project folders start empty on purpose. Kiro writes the specs, plans and code during the workshop.
-
-The two parts are independent: always start `kiro-cli` **inside** the folder you are working on, so each part only sees its own `.kiro/` configuration.
 
 ## Agenda
 
-| Time | Part |
+| Time | What |
 |---|---|
-| 1:00 | Meet Kiro: IDE, CLI, Web and Crew |
-| 1:20 | The scenario: the shopping cart ticket |
-| 1:35 | **Part 1: spec-driven development** → [`spec-driven/`](spec-driven/README.md) |
-| 2:35 | Break |
-| 2:50 | **Part 2: AI-DLC** → [`ai-dlc/`](ai-dlc/README.md) |
-| 3:50 | Break |
-| 4:05 | Compare the two results |
-| 4:25 | Extend Kiro: MCP, skills, powers |
-| 4:45 | Wrap-up and Q&A |
+| 1:00 – 1:20 | **Why AI-DLC.** Vibe coding, spec-driven development and AI-DLC. Live Kiro spec demo. What multi-agent runs really cost |
+| 1:20 – 1:35 | **Set up.** Teams and roles, install the AI-DLC rules, paste the trigger phrase |
+| 1:35 – 2:30 | **Inception: requirements.** Answer the question files, settle the stakeholder conflicts. *Checkpoint 1* |
+| 2:30 – 2:40 | Break |
+| 2:40 – 3:25 | **Inception: plan and design.** Challenge the workflow plan, approve the design. *Checkpoint 2* |
+| 3:25 – 4:20 | **Construction.** Code and tests, then `check_cart.py`. *Checkpoint 3* |
+| 4:20 – 4:50 | **Demos.** Each team runs the checker and walks one number back to the sentence that caused it |
+| 4:50 – 5:00 | **Retro and wrap-up** |
 
-## Compare the two results (4:05)
+## The one rule
 
-From the repo root:
-
-```bash
-# What each process left on disk
-ls -R spec-driven/.kiro/specs/ ai-dlc/aidlc-docs/
-
-# What AI-DLC recorded about itself
-head -40 ai-dlc/aidlc-docs/audit.md
-```
-
-Ask yourself: six months from now, which project could a new teammate (or a new AI session) pick up and extend with confidence?
+**Kiro proposes, you approve.** Never let it skip a gate, and never answer its questions in chat: answers go in the question files.
 
 ## Sources
 
-- AWS workshop *Kiro – Getting Started*: Code Challenge and Lab 12 (catalog.workshops.aws/q-zero2hero)
-- Kiro documentation: kiro.dev/docs/specs
 - AI-DLC workflows: github.com/awslabs/aidlc-workflows (release v1.0.1)
+- Kiro documentation: kiro.dev/docs
+- User stories adapted from the AWS workshop *Kiro – Getting Started*, Code Challenge (catalog.workshops.aws/q-zero2hero)
+- Workshop format inspired by the AI-DLC Workshop kit at github.com/tongzahub/AI-DLC-Workshop
