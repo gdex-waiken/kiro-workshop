@@ -6,7 +6,7 @@
 
 - [ ] **Kiro IDE installed and signed in.** Kiro CLI also works if you prefer the terminal.
 - [ ] **Kiro answers a test prompt.** Ask it to "write a haiku about shopping carts". That proves sign-in, plan and network in one go. A spinner is not a pass.
-- [ ] **You have Kiro credits left.** Check your usage in Kiro. The hands-on uses a fair number of requests; a fresh free account should be fine, but don't arrive with an almost empty allowance.
+- [ ] **You have Kiro credits left.** Check your usage in Kiro. The two hands-on parts use a fair number of requests; don't arrive with an almost empty allowance.
 - [ ] **Python 3.12** installed: `python --version` prints `Python 3.12.x`. Avoid 3.13+ for this workshop.
 - [ ] **Git** installed: `git --version` prints a version.
 - [ ] **Windows only:** Git Bash, or use the PowerShell commands in the guide.
@@ -15,7 +15,7 @@
 
 ```bash
 git clone https://github.com/gdex-waiken/kiro-workshop.git
-cd kiro-workshop/ai-dlc
+cd kiro-workshop/spec-driven
 python check_cart.py
 ```
 
@@ -30,4 +30,4 @@ The last command should say it **cannot reach** `http://localhost:8000`. That is
 
 - Do not download the AI-DLC rules yet. The facilitator names the exact version on the day (v1.0.1) and has a USB copy.
 - Do not use a different AI-DLC package. Take the rules only from **`awslabs/aidlc-workflows`**.
-- Do not start the exercise early: the stakeholder conflicts work best when the team reads them together.
+- Do not open `ai-dlc/stakeholder-notes.md` early: the conflicts work best when the team reads them together.
