@@ -10,6 +10,17 @@ You build the same cart API as in Part 1 (`spec-driven/`), this time the AI-DLC 
 
 ## 1 · Set up (15 minutes, before you type anything at Kiro)
 
+### 1.0 Turn off Kiro Workflows (do this first)
+
+AI-DLC must lead the chat itself. If Kiro's **Workflows** feature is on, Kiro can run your AI-DLC request as its own background workflow and skip AI-DLC's questions and gates.
+
+1. Kiro IDE: **Ctrl + ,** (Cmd + , on macOS) → **User** tab → search `workflows` → **untick Kiro Agent › Workflows: Enabled**.
+   Or Command Palette (**Ctrl + Shift + P**) → **Kiro: Disable Workflows**.
+2. Command Palette → **Developer: Reload Window**, then start a **new** chat.
+3. Kiro CLI: `/settings` → **Features** → **Workflows** off, then restart `kiro-cli`.
+
+It's one setting for the whole computer, not per project. Pictures: workshop website, Chapter 4.1.
+
 ### 1.1 Install the AI-DLC rules (v1.0.1) into this folder
 
 **Git Bash, macOS or Linux:**
@@ -133,6 +144,7 @@ Behind schedule? Tell the facilitator. You may be given a ready-made `aidlc-docs
 | Symptom | Do this |
 |---|---|
 | No welcome message, no `aidlc-docs/` | The rules are in the wrong folder. Check §1.1, then start a **new** session |
+| Kiro says it's starting a **workflow**, or a Workflows panel opens | Kiro Workflows is still on. Turn it off (§1.0), reload the window, start a **new** session |
 | Kiro suggests switching to Spec mode | Decline. Stay in Vibe mode: AI-DLC replaces the spec workflow |
 | Kiro keeps asking the same thing | Your answer was vague. The follow-up file is the system working. Be more specific |
 | Kiro proposes a database, Docker, login or a new endpoint | Reject it at the gate and point to `technical-environment.md` |

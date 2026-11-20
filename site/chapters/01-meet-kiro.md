@@ -22,7 +22,9 @@ Kiro is an AI teammate from AWS that plans, writes, tests and fixes software. On
 
 A desktop editor built on a VS Code foundation. It's where you'll work today.
 
-![Kiro IDE](/images/kiro-ide.png){.shot}
+![Kiro IDE with the kedaiku-cart spec open: steering and spec files on the left, the tasks list in the middle, the chat and its built-in agents on the right](/images/kiro-ide-spec.png){.shot .wide}
+
+*Kiro IDE with a spec open. Left: `.kiro/steering/` and `.kiro/specs/kedaiku-cart/`. Middle: `tasks.md` with **Start task** and **Run all tasks**. Right: the chat, with the built-in Spec, Plan, Bug Fix and Quick Spec agents.*
 
 - **Specs:** requirements, design and tasks, reviewed in the editor.
 - **Chat** with full project context, plus built-in agents: Spec, Plan, Bug Fix and Quick Spec.
@@ -32,7 +34,7 @@ A desktop editor built on a VS Code foundation. It's where you'll work today.
 
 The same agent, in your terminal. Use it over SSH, in scripts, or as a headless step in a CI/CD pipeline.
 
-![Kiro CLI V3 asking to trust a workspace](/images/kiro-cli-v3.png){.shot}
+![Kiro CLI V3 asking to trust a workspace](/images/kiro-cli-v3.png){.shot .wide}
 
 ```bash
 curl -fsSL https://cli.kiro.dev/install | bash
@@ -45,7 +47,9 @@ The first time you start it in a folder, Kiro asks whether to trust the workspac
 
 A browser agent at **app.kiro.dev**. Every task runs in its own isolated sandbox, and Kiro never merges on its own: you review the pull request.
 
-![Kiro Web](/images/kiro-web.png){.shot}
+![Kiro Web: a finished task that opened pull requests in five repositories](/images/kiro-web-full.png){.shot .wide}
+
+*Kiro Web after a task across five repositories, with the pull requests it opened. Screenshot: Kiro First Call Deck (names blurred).*
 
 | Mode | Use it for |
 |---|---|
@@ -57,15 +61,11 @@ You can also start work from GitHub: add the `kiro` label to an issue, or commen
 
 ## Kiro Mobile
 
-Check on tasks, review pull requests and chat with your agent on the go.
-
-![Kiro Mobile](/images/kiro-mobile.png){.shot .narrow}
+Check on tasks, review pull requests and chat with your agent on the go. You can read a session's spec files there too.
 
 ## Kiro Crew: a workspace that keeps working
 
 IDE, CLI and Web handle one session while you drive. **Crew carries the work across sessions**: it remembers, runs on a schedule, and keeps working when no chat is open. It's open source (Apache 2.0), runs on the Kiro CLI and reads your `.kiro/` setup.
-
-![Kiro Crew](/images/kiro-crew.png){.shot}
 
 | Crew can | How |
 |---|---|
@@ -85,7 +85,7 @@ IDE, CLI and Web handle one session while you drive. **Crew carries the work acr
 
 A **bot** is a conductor: it does short tasks itself, briefs **workers** for long ones, and asks you before it changes its model, permissions or goals. It works towards a goal, with milestones you approve and regular check-ins.
 
-![A Kiro Crew bot driving three specialist sessions](/images/kiro-crew-bot.png){.shot}
+![A Kiro Crew bot driving three specialist sessions](/images/kiro-crew-bot.png){.shot .wide}
 
 *The "CEO Boss" bot drives AWS Cloud Architect, Data Engineer and DevOps/IaC sessions.*
 

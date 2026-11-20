@@ -77,3 +77,8 @@
 
 /* The Kiro panel screenshot is tall and narrow: give it room */
 .shot-pair img.panel { max-height: 480px; }
+
+/* Full screenshots: use the whole content width, never crop or squash */
+.vp-doc img.shot.wide { width: 100%; height: auto; max-height: none; }
+/* Small UI crops (a setting, a menu) keep their own size */
+.vp-doc img.ui { display: block; margin: 16px auto; max-width: 100%; border-radius: 10px; border: 1px solid var(--vp-c-divider); }
