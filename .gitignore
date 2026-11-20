@@ -25,3 +25,7 @@ aidlc-rules/
 Thumbs.db
 .vscode/
 .idea/
+
+# Website build output
+site/.vitepress/dist/
+site/.vitepress/cache/

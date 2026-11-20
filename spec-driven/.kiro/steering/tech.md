@@ -2,17 +2,27 @@
 inclusion: always
 ---
 
-# Shopping cart API: technical rules
+# Tech stack and rules
 
-- Language: Python 3.12.
-- Follow Clean Architecture. Keep three layers:
-  - `domain`: entities and business rules. No framework or storage imports.
-  - `application`: use cases that work with the domain through interfaces (ports).
-  - `adapters`: the FastAPI HTTP layer and the in-memory repository.
-- Follow Test-Driven Development. Write a failing test first, show it failing, make it pass, then refactor. Never skip the failing step.
-- Use pytest for all tests.
-- Expose the API with FastAPI and run it locally with uvicorn.
-- Store carts in an in-memory repository behind a repository interface, so a real database can be added later as a new adapter.
-- Everything runs locally. Do not add any cloud deployment or infrastructure code.
-- Build one feature at a time. Start with "add items to cart".
-- Keep a `requirements.txt` with every dependency, and a short README that says how to install, test and run the app.
+## Stack
+- Python 3.12
+- FastAPI + Pydantic v2, served by uvicorn on port 8000
+- pytest, with FastAPI `TestClient` for API tests
+- In-memory storage behind repository interfaces. No database, no Docker, no cloud.
+
+## Architecture: Clean Architecture
+- Three layers: `domain` -> `application` -> `adapters`. Dependencies point inward only.
+- `domain`: entities and business rules. Standard library only.
+- `application`: use cases. They reach storage only through ports (abstract base classes).
+- `adapters`: FastAPI routes, Pydantic schemas, in-memory repositories, the catalog loader.
+
+## Coding rules
+- Money is `decimal.Decimal`, never `float`.
+- Type hints on every function.
+- Domain errors are plain exceptions, mapped to HTTP status codes only in the HTTP adapter.
+- A failed request leaves the cart exactly as it was.
+- Keep `requirements.txt` up to date.
+
+## Working rules
+- Test-Driven Development: write a failing test, see it fail, make it pass, then refactor.
+- Run `pytest` before you mark a task done.

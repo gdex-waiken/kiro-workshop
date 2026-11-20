@@ -1,0 +1,16 @@
+step,cart,action,product_id,quantity,expected_status,expected_item_count,expected_subtotal,what_happens
+1,A,add,SKU-001,2,201,2,25.80,first add creates the cart
+2,A,add,SKU-002,1,201,3,27.30,two notebooks and one pen
+3,A,add,SKU-001,1,201,4,40.20,same product again
+4,A,add,SKU-003,3,201,7,40.50,three cheap stickers
+5,A,add,SKU-002,0,422,7,40.50,quantity zero
+6,A,add,SKU-999,1,404,7,40.50,product not in the catalog
+7,A,add,SKU-002,3,201,10,45.00,more pens
+8,A,add,SKU-002,7,422,10,45.00,too many pens
+9,A,add,SKU-002,6,201,16,54.00,pens up to the limit
+10,B,get,,,404,,,a cart nobody has created
+11,B,add,SKU-004,1,201,1,89.00,second cart
+12,B,add,SKU-005,3,201,4,163.85,three water bottles
+13,B,add,SKU-004,11,422,4,163.85,one big request
+14,B,add,SKU-005,-1,422,4,163.85,negative quantity
+15,A,get,,,200,16,54.00,first cart is untouched

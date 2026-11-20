@@ -1,6 +1,6 @@
-# The ticket: shopping cart API
+# The ticket: KedaiKu shopping cart API
 
-You are building the backend of a shopping cart for an e-commerce system. The first goal is an MVP API for **adding items to a cart**.
+Raised by **Aina Rahman, Head of Product**. This is the ticket as the product team wrote it. It is short on purpose: the details live in `stakeholder-notes.md`.
 
 ## Feature 1 – Add items to the cart
 
@@ -13,7 +13,7 @@ Acceptance criteria:
 - The cart should show the item details (product name, price, quantity)
 - The cart should calculate and display the subtotal
 
-## Feature 2 – Remove items from the cart (stretch goal)
+## Feature 2 – Remove items from the cart (stretch goal, only if Feature 1 is done)
 
 **As a customer, I want to remove items from my shopping cart, so that I can adjust my intended purchases.**
 
@@ -26,4 +26,4 @@ Acceptance criteria:
 Build **one feature at a time**. Start with Feature 1.
 
 ---
-Source: AWS workshop *Kiro – Getting Started*, Code Challenge (catalog.workshops.aws/q-zero2hero/en-US/96-code-challenge).
+User stories adapted from the AWS workshop *Kiro – Getting Started*, Code Challenge (catalog.workshops.aws/q-zero2hero/en-US/96-code-challenge).
