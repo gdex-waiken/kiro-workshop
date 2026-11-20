@@ -1,6 +1,6 @@
 # 2. The scenario: the KedaiKu cart
 
-**1:20 – 1:35 · Talk.** You'll build the same small cart API twice this afternoon: first with a spec, then with AI-DLC.
+**9:50 – 10:05 · Talk.** You'll build the same small cart API twice this morning: first with a spec, then with AI-DLC.
 
 ## The ticket
 

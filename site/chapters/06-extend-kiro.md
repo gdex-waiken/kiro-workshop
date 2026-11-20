@@ -1,6 +1,6 @@
 # 6. Extend Kiro, safely
 
-**4:25 – 4:45 · Demo.** Connect tools with MCP, add skills and powers, and spend tokens on purpose.
+**12:55 – 1:15 · Demo.** Connect tools with MCP, add skills and powers, and spend tokens on purpose.
 
 ## Which one do I need?
 

@@ -1,6 +1,6 @@
 # 7. Roll it out to the team
 
-**4:45 – 5:00 · Talk and Q&A.**
+**1:15 – 1:30 · Talk and Q&A.**
 
 <img src="/images/kiro-ghost.png" alt="The Kiro ghost" class="mascot-float" />
 

@@ -1,6 +1,6 @@
 # 4.2 Questions and conflicts
 
-**3:00 – 3:15 · Checkpoint 1 at 3:15.**
+**11:30 – 11:45 · Checkpoint 1 at 11:45.**
 
 ## Read first, as a team
 
@@ -55,7 +55,7 @@ Don't settle these by vote. Look for **who has the authority** and what else the
 
 Kiro asks whether to enable **Security baseline**, **Resiliency** and **Property-Based Testing**. Each one adds work. Whatever you choose, write down why.
 
-::: info Checkpoint 1 (3:15)
+::: info Checkpoint 1 (11:45)
 Every conflict has a decision, a reason and a source in `team-log.md`. The extension decision is recorded. Answers are in the question files, not the chat.
 :::
 

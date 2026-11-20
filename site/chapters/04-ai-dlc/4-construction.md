@@ -1,6 +1,6 @@
 # 4.4 Construction
 
-**3:30 – 3:50 · Checkpoint 3 at 3:50.**
+**12:00 – 12:20 · Checkpoint 3 at 12:20.**
 
 ## Let Kiro build, then check it yourself
 
@@ -52,7 +52,7 @@ check_cart.py fails step <n> (<what_happens>): <paste the problem lines>. Find t
 | Kiro plans a database, Docker or login | Delete it at the gate and point to `technical-environment.md` |
 | Running low on Kiro credits | Stop asking for explanations in chat. Read the files instead |
 
-::: info Checkpoint 3 (3:50)
+::: info Checkpoint 3 (12:20)
 The `check_cart.py` result is on screen. Compare it with your Chapter 3 score.
 :::
 

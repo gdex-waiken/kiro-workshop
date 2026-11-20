@@ -6,8 +6,8 @@ Team name:
 
 | Time | Driver | Product Owner | Reviewer | Scribe |
 |---|---|---|---|---|
-| 1:20 | | | | |
-| 2:40 (after break) | | | | |
+| 9:50 | | | | |
+| 11:20 (after break) | | | | |
 
 ## Extension decision (Requirements Analysis)
 
@@ -55,7 +55,7 @@ Any file you changed yourself, outside the workflow, and when you told Kiro.
 |---|---|---|
 | | | |
 
-## Retro (4:50)
+## Retro (1:20)
 
 - 3 things AI-DLC did well:
 - 3 frictions:

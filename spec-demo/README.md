@@ -1,6 +1,6 @@
 # Spec demo (facilitator, 10 minutes, live on the projector)
 
-**Time:** inside the 1:00 – 1:20 opening. Participants watch; they do not type.
+**Time:** inside the 9:30 – 9:50 opening. Participants watch; they do not type.
 
 The point: show what Kiro's built-in **spec workflow** looks like, so the class can see what AI-DLC adds on top of it. Spec mode turns a prompt into three documents and a task list. AI-DLC adds questions in files, stakeholder conflicts, an execution plan you can challenge, and a gate at every stage.
 

@@ -1,6 +1,6 @@
 # 1. Meet Kiro
 
-**1:00 – 1:20 · Talk and demo.** By the end of this chapter you know which Kiro to open for which job.
+**9:30 – 9:50 · Talk and demo.** By the end of this chapter you know which Kiro to open for which job.
 
 <img src="/images/kiro-ghost.png" alt="The Kiro ghost" class="mascot-float" />
 

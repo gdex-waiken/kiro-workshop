@@ -1,6 +1,6 @@
 # AI-DLC cheat sheet
 
-> Keep this open all afternoon. It's the map; `ai-dlc/README.md` is the route.
+> Keep this open all morning. It's the map; `ai-dlc/README.md` is the route.
 
 ## The golden rule
 

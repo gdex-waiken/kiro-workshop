@@ -1,6 +1,6 @@
 # 4.1 Set up
 
-**2:50 – 3:00.** Same teams, swap the Driver.
+**11:20 – 11:30.** Same teams, swap the Driver.
 
 ## Install the AI-DLC rules (v1.0.1)
 

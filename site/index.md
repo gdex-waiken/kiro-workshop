@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Kiro Developer Workshop
   text: One cart, built twice
-  tagline: A 4-hour hands-on afternoon. Build the same cart API with spec-driven development, then again with AI-DLC, and compare what you get.
+  tagline: Sweetmag AWS Kiro Training · Wed 9 Dec, 9:30 AM – 1:30 PM (GMT+8). A 4-hour hands-on morning. Build the same cart API with spec-driven development, then again with AI-DLC, and compare what you get.
   image:
     src: /images/kiro-ghost.png
     alt: The Kiro ghost
@@ -44,19 +44,21 @@ features:
     link: /chapters/05-compare
 ---
 
-## The afternoon
+## The morning
+
+**Sweetmag AWS Kiro Training · Wednesday 9 December · 9:30 AM – 1:30 PM (GMT+8)**
 
 | Time | Chapter | Format |
 |---|---|---|
-| 1:00 – 1:20 | [1 · Meet Kiro](/chapters/01-meet-kiro) | Talk and demo |
-| 1:20 – 1:35 | [2 · The scenario](/chapters/02-the-scenario) | Talk |
-| 1:35 – 2:35 | [3 · Spec-driven development](/chapters/03-spec/) | **Hands-on, 1 hour** |
-| 2:35 – 2:50 | Break | |
-| 2:50 – 3:50 | [4 · AI-DLC](/chapters/04-ai-dlc/) | **Hands-on, 1 hour** |
-| 3:50 – 4:05 | Break | |
-| 4:05 – 4:25 | [5 · Which way to build?](/chapters/05-compare) | Discussion |
-| 4:25 – 4:45 | [6 · Extend Kiro](/chapters/06-extend-kiro) | Demo |
-| 4:45 – 5:00 | [7 · Wrap-up](/chapters/07-wrap-up) | Talk and Q&A |
+| 9:30 – 9:50 | [1 · Meet Kiro](/chapters/01-meet-kiro) | Talk and demo |
+| 9:50 – 10:05 | [2 · The scenario](/chapters/02-the-scenario) | Talk |
+| 10:05 – 11:05 | [3 · Spec-driven development](/chapters/03-spec/) | **Hands-on, 1 hour** |
+| 11:05 – 11:20 | Break | |
+| 11:20 – 12:20 | [4 · AI-DLC](/chapters/04-ai-dlc/) | **Hands-on, 1 hour** |
+| 12:20 – 12:35 | Break | |
+| 12:35 – 12:55 | [5 · Which way to build?](/chapters/05-compare) | Discussion |
+| 12:55 – 1:15 | [6 · Extend Kiro](/chapters/06-extend-kiro) | Demo |
+| 1:15 – 1:30 | [7 · Wrap-up](/chapters/07-wrap-up) | Talk and Q&A |
 
 ## How to use this site
 

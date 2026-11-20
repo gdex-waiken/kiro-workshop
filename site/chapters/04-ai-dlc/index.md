@@ -1,6 +1,6 @@
 # 4. AI-DLC: Kiro leads, people approve
 
-**2:50 – 3:50 · Hands-on, 1 hour · Kiro IDE.** Same cart, built again. This time Kiro asks before it assumes.
+**11:20 – 12:20 · Hands-on, 1 hour · Kiro IDE.** Same cart, built again. This time Kiro asks before it assumes.
 
 ## Reverse the conversation
 
@@ -68,10 +68,10 @@ AI-DLC comes as a set of rules from [awslabs/aidlc-workflows](https://github.com
 
 | Time | Page | Checkpoint |
 |---|---|---|
-| 2:50 – 3:00 | [4.1 Set up](./1-set-up) | Welcome message appears |
-| 3:00 – 3:15 | [4.2 Questions and conflicts](./2-inception) | **CP1:** every conflict has a recorded decision |
-| 3:15 – 3:30 | [4.3 Plan and design](./3-plan-and-design) | **CP2:** you deleted or questioned something in the plan |
-| 3:30 – 3:50 | [4.4 Construction](./4-construction) · [4.5 The record](./5-the-record) | **CP3:** checker result on screen |
+| 11:20 – 11:30 | [4.1 Set up](./1-set-up) | Welcome message appears |
+| 11:30 – 11:45 | [4.2 Questions and conflicts](./2-inception) | **CP1:** every conflict has a recorded decision |
+| 11:45 – 12:00 | [4.3 Plan and design](./3-plan-and-design) | **CP2:** you deleted or questioned something in the plan |
+| 12:00 – 12:20 | [4.4 Construction](./4-construction) · [4.5 The record](./5-the-record) | **CP3:** checker result on screen |
 
 ::: tip Behind schedule?
 Ask the facilitator for a ready-made `aidlc-docs/` up to an approved design, and jump straight to Construction.

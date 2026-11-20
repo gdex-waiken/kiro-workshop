@@ -31,4 +31,4 @@ Trace the subtotal 54.00 at step 9 of sample-data/cart-scenario.csv back through
 ```
 :::
 
-**Break: 3:50 – 4:05.** Then [Chapter 5: Which way to build?](../05-compare)
+**Break: 12:20 – 12:35.** Then [Chapter 5: Which way to build?](../05-compare)

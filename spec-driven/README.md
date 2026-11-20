@@ -1,6 +1,6 @@
 # Part 1: spec-driven development
 
-**Time:** 1:35 – 2:35 PM · teams of 3–4 · one laptop per team · Kiro IDE
+**Time:** 10:05 – 11:05 AM · teams of 3–4 · one laptop per team · Kiro IDE
 
 You build the KedaiKu cart service with Kiro's built-in **spec workflow**: Kiro writes `requirements.md`, `design.md` and `tasks.md`, you review each one, then it builds task by task.
 

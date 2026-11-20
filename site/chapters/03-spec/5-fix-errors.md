@@ -44,4 +44,4 @@ If you change code yourself, tell Kiro what you changed, so the spec and the cod
 Tips and troubleshooting adapted from the AWS workshop *Kiro – Getting Started*, Code Challenge.
 :::
 
-**Break: 2:35 – 2:50.** Then [Chapter 4: AI-DLC](../04-ai-dlc/).
+**Break: 11:05 – 11:20.** Then [Chapter 4: AI-DLC](../04-ai-dlc/).

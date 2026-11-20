@@ -1,6 +1,6 @@
 # 4.3 Plan and design
 
-**3:15 – 3:30 · Checkpoint 2 at 3:30.**
+**11:45 – 12:00 · Checkpoint 2 at 12:00.**
 
 ## Every stage ends at a gate
 
@@ -46,7 +46,7 @@ Request changes: remove <stage or task> from the execution plan. It isn't in tic
 
 First Kiro shows a **code-generation plan**, and only after you approve it does it write code. Check the plan as carefully as the code: a wrong approach is cheapest to fix here.
 
-::: info Checkpoint 2 (3:30)
+::: info Checkpoint 2 (12:00)
 You deleted or questioned at least one thing in the plan, and said why at the gate. The design has no database, Docker or login.
 :::
 

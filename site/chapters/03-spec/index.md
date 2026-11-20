@@ -1,6 +1,6 @@
 # 3. Spec-driven development
 
-**1:35 – 2:35 · Hands-on, 1 hour · Kiro IDE.** Plan it, approve it, build it, check it, fix it.
+**10:05 – 11:05 · Hands-on, 1 hour · Kiro IDE.** Plan it, approve it, build it, check it, fix it.
 
 ![Kiro IDE with a spec open](/images/kiro-ide.png){.shot}
 

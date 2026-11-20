@@ -1,6 +1,6 @@
 # 5. Which way to build?
 
-**4:05 – 4:25 · Discussion.** You've built the same cart twice. Now put the two results side by side.
+**12:35 – 12:55 · Discussion.** You've built the same cart twice. Now put the two results side by side.
 
 ## Compare your two builds
 

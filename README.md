@@ -1,6 +1,6 @@
 # kiro-workshop: one cart, built twice
 
-Hands-on material for the **Kiro developer workshop** (1:00 – 5:00 PM, 4 hours).
+Hands-on material for the **Sweetmag AWS Kiro Training** (Wednesday 9 December, 9:30 AM – 1:30 PM GMT+8, 4 hours).
 
 You build one small **cart API** for a fictional online store, KedaiKu, twice:
 
@@ -57,15 +57,15 @@ kiro-workshop/
 
 | Time | Chapter |
 |---|---|
-| 1:00 – 1:20 | **1 · Meet Kiro:** IDE, CLI, Web, Mobile and Crew, and which one to use when |
-| 1:20 – 1:35 | **2 · The scenario:** the KedaiKu ticket, the rules, teams and roles |
-| 1:35 – 2:35 | **3 · Spec-driven development** (hands-on, `spec-driven/`) |
-| 2:35 – 2:50 | Break |
-| 2:50 – 3:50 | **4 · AI-DLC** (hands-on, `ai-dlc/`) |
-| 3:50 – 4:05 | Break |
-| 4:05 – 4:25 | **5 · Which way to build?** Compare the two results |
-| 4:25 – 4:45 | **6 · Extend Kiro:** MCP, skills, powers, and what agents really cost |
-| 4:45 – 5:00 | **7 · Wrap-up:** governance, retro and next steps |
+| 9:30 – 9:50 | **1 · Meet Kiro:** IDE, CLI, Web, Mobile and Crew, and which one to use when |
+| 9:50 – 10:05 | **2 · The scenario:** the KedaiKu ticket, the rules, teams and roles |
+| 10:05 – 11:05 | **3 · Spec-driven development** (hands-on, `spec-driven/`) |
+| 11:05 – 11:20 | Break |
+| 11:20 – 12:20 | **4 · AI-DLC** (hands-on, `ai-dlc/`) |
+| 12:20 – 12:35 | Break |
+| 12:35 – 12:55 | **5 · Which way to build?** Compare the two results |
+| 12:55 – 1:15 | **6 · Extend Kiro:** MCP, skills, powers, and what agents really cost |
+| 1:15 – 1:30 | **7 · Wrap-up:** governance, retro and next steps |
 
 ## The one rule
 

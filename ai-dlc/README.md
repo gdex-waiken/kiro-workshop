@@ -1,6 +1,6 @@
 # Hands-on: build the KedaiKu cart with AI-DLC
 
-**Time:** 2:50 – 3:50 PM · teams of 3–4 · one laptop per team · the full guide with every prompt is on the workshop website, Chapter 4
+**Time:** 11:20 AM – 12:20 PM · teams of 3–4 · one laptop per team · the full guide with every prompt is on the workshop website, Chapter 4
 
 You build the same cart API as in Part 1 (`spec-driven/`), this time the AI-DLC way. Kiro leads with the **AI-DLC** workflow: it asks questions in files, plans, and stops at a gate before every stage. You answer, challenge and approve. At the end, your service must reproduce the numbers in `sample-data/cart-scenario.csv`.
 
@@ -101,10 +101,10 @@ Read 1–3 **before** Kiro asks its first question. Not every answer is written 
 
 | Time | You should be… | Checkpoint |
 |---|---|---|
-| 2:50 – 3:00 | Rules installed, roles set, trigger phrase answered | |
-| 3:00 – 3:15 | **Requirements Analysis:** question files answered, extension decision recorded, conflicts settled | **CP1 3:15:** every conflict in `stakeholder-notes.md` has a recorded decision |
-| 3:15 – 3:30 | **Workflow Planning** challenged, **Application Design** approved | **CP2 3:30:** the plan was argued with, not just clicked |
-| 3:30 – 3:50 | **Construction:** code and tests, then `check_cart.py` | **CP3 3:50:** `check_cart.py` result on screen |
+| 11:20 – 11:30 | Rules installed, roles set, trigger phrase answered | |
+| 11:30 – 11:45 | **Requirements Analysis:** question files answered, extension decision recorded, conflicts settled | **CP1 11:45:** every conflict in `stakeholder-notes.md` has a recorded decision |
+| 11:45 – 12:00 | **Workflow Planning** challenged, **Application Design** approved | **CP2 12:00:** the plan was argued with, not just clicked |
+| 12:00 – 12:20 | **Construction:** code and tests, then `check_cart.py` | **CP3 12:20:** `check_cart.py` result on screen |
 
 Behind schedule? Tell the facilitator. You may be given a ready-made `aidlc-docs/` so you can jump to Construction.
 
@@ -120,7 +120,7 @@ Behind schedule? Tell the facilitator. You may be given a ready-made `aidlc-docs
 
 ---
 
-## 7 · What you show in the comparison at 4:05 (a few minutes per team)
+## 7 · What you show in the comparison at 12:35 (a few minutes per team)
 
 1. Run `check_cart.py` live.
 2. Pick **one number** it checks (for example `54.00` or `16`) and walk it back, out loud: the number → the test → the design → the requirement → your answer in a question file → the sentence a stakeholder said.
