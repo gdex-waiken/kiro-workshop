@@ -14,7 +14,6 @@ export default defineConfig({
     nav: [
       { text: 'Start here', link: '/chapters/00-before-you-start' },
       { text: 'Cheat sheet', link: '/chapters/cheat-sheet' },
-      { text: 'Repo', link: repo },
     ],
     sidebar: [
       {
@@ -76,7 +75,6 @@ export default defineConfig({
       },
     ],
     outline: [2, 3],
-    search: { provider: 'local' },
     socialLinks: [{ icon: 'github', link: repo }],
     docFooter: { prev: 'Previous', next: 'Next' },
     footer: {
