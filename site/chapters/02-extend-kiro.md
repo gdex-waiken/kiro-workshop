@@ -1,6 +1,6 @@
-# 6. Extend Kiro, safely
+# 2. Extend Kiro, safely
 
-**12:55 – 1:15 · Demo.** Connect tools with MCP, add skills and powers, and spend tokens on purpose.
+**9:50 – 10:00 · Demo.** Connect tools with MCP, add skills and powers, and spend tokens on purpose. Worth knowing before the hands-on starts: it's how you keep the next three hours cheap.
 
 ## Which one do I need?
 
@@ -60,7 +60,7 @@ A power bundles MCP tools, skills and guidance in one folder (`plugin.json`, opt
 
 ## Spend tokens on purpose
 
-A real multi-agent run built the same small cart: **37 agent sessions, about 11 million tokens re-read, and only about 1% of them written as code.** Every reviewer agent was a full session that replied `{"ok": true}`.
+A real multi-agent run built a small API service, about the size of today's: **37 agent sessions, about 11 million tokens re-read, and only about 1% of them written as code.** Every reviewer agent was a full session that replied `{"ok": true}`.
 
 | Bad practice | Better practice |
 |---|---|

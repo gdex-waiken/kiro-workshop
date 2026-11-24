@@ -1,40 +1,43 @@
-# Vision: KedaiKu cart service
+# Vision: Pelita Ideas
 
-> KedaiKu is a fictional online store selling stationery and everyday items in Malaysia. Every company, person and quote in this workshop is invented.
+> Pelita Group is a fictional logistics company in Malaysia. Every company, person and quote in this workshop is invented.
 
 ## Why we are building this
 
-KedaiKu's mobile app is being rebuilt. The app team has already designed its cart screen against an agreed API contract (`api-contract.md`). They need a backend that honours that contract so they can start testing.
+Pelita Group asks staff for improvement ideas, but today they arrive by email, in WhatsApp groups and in corridor chats. The business wants three problems gone:
 
-Today, carts live inside the old monolith. It has two known problems the business wants gone:
+1. **Ideas get lost.** Nobody can see what has already been suggested, so good ideas disappear in inboxes.
+2. **The same idea arrives again and again.** Last quarter "reusable parcel bags" was sent in five times by five people.
+3. **Nobody knows why an idea was picked.** Managers choose favourites behind closed doors. Staff want to see which ideas their colleagues back.
 
-1. Cart totals sometimes show amounts like `RM 0.30000000004` because money is stored as floating point.
-2. The app silently changed quantities during last year's Hari Raya sale, which caused a wave of complaints and refunds.
+The app team has already designed the portal screens against an agreed API contract (`api-contract.md`). They need a backend that honours that contract so they can start testing.
 
 ## Who uses it
 
 | Who | How |
 |---|---|
-| Customers | Through the KedaiKu mobile app: add products, see the cart badge, see the cart screen |
-| Mobile app team | Calls the API exactly as described in `api-contract.md` |
-| Customer service | Reads carts when a customer calls about a wrong total |
+| Staff | Through the portal: submit ideas, browse them and, later, vote |
+| Innovation committee | Reviews the top-ranked ideas once a month |
+| App team | Calls the API exactly as described in `api-contract.md` |
 
-## In scope for this release
+## In scope
 
-- Add a product with a quantity to a cart
-- View a cart: its lines, item count and subtotal
-- Remove a product from a cart (stretch, only if time allows)
+| Feature | When |
+|---|---|
+| Submit an idea, list ideas, open one idea | Release 1, this morning (greenfield) |
+| Vote for an idea, see a ranked list | Release 1, this afternoon (brownfield: added to the existing code) |
 
 ## Out of scope for this release
 
-- Promotions, discounts, vouchers, bundles
-- Checkout, payment, tax, shipping
-- Stock levels and reservations
-- Customer accounts and login
+- Comments, editing or deleting ideas, attachments
+- Anonymous ideas
+- AI summaries, auto-tagging or any other AI feature inside the portal
+- Prizes, points or leaderboards of people
+- Login and single sign-on. The staff ID in the request is trusted for now
 - A real database and any cloud deployment
 
 ## What success looks like
 
-- The mobile app team can run its cart screen against this API without changing their code.
-- Every amount is exact to the sen.
-- Replaying `sample-data/cart-scenario.csv` with `check_cart.py` passes every step.
+- The app team can run its screens against this API without changing their code.
+- Replaying the answer key with `check_ideas.py` passes every step, for each feature.
+- Every disagreement in `stakeholder-notes.md` has a recorded decision.

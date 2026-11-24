@@ -1,48 +1,55 @@
 # Stakeholder notes
 
-Notes from the cart kick-off meeting and the messages that followed, in the stakeholders' own words. **They do not all agree.** When the AI asks you a question, look for the answer here. Where people disagree, your Product Owner decides and your Scribe records why in `team-log.md`.
+Notes from the portal kick-off meeting and the messages that followed, in the stakeholders' own words. **They do not all agree.** When the AI asks you a question, look for the answer here. Where people disagree, your Product Owner decides and your Scribe records why in `team-log.md`.
 
 ---
 
 ## Kick-off meeting, Monday
 
-**Aina Rahman, Head of Product**
-> "Keep this release small. Add to cart, see the cart, and remove if there's time. Anything else waits for the next release."
+**Aina Rahman, Head of Innovation**
+> "Keep release 1 small. Submit, browse, and then voting. Anything else waits."
 >
-> "The badge on the cart icon has to match what the customer will actually receive in the box. If they pick two notebooks and one pen, the badge says three."
+> "Categories are the five on our list in `categories.csv`. The committee reports by category every month, so the list is fixed."
 
-**Daniel Wong, Mobile app designer**
-> "On the cart icon we show how many different products are in the cart. It keeps the badge small. Two notebooks and a pen is two products."
+**Daniel Wong, App designer**
+> "The idea card shows up to 80 characters of title. If someone types more, just cut it and add '...'. Nobody will mind."
 >
-> "If someone types more than they're allowed, just cap it at the maximum for them. Fewer error screens is a better experience."
+> "On voting: if someone taps the vote button twice, just ignore the second tap and say OK. Fewer error screens."
 
-**Priya Nair, Warehouse operations**
-> "One product in one order can't be more than 10 units. That's the size of a pick bin. Anything over 10 has to go through the corporate sales desk."
-
-**Marcus Lim, Marketing lead**
-> "Corporate buyers order pens by the box of 50. Please don't put a limit on quantity, it'll cost us sales."
+**Siti Hassan, People and Culture lead**
+> "Never change what someone wrote without telling them. If the system can't take it, say so and let them fix it."
 >
-> "While you're in there: can we add 'buy 3 of the same product, get 10% off that line'? It's basically a one-liner and it would be great for the launch campaign."
+> "Please let people submit anonymously. Our junior staff are shy about putting their name on an idea."
 
-**Siti Hassan, Customer service lead**
-> "Please never change what the customer asked for without telling them. Last Hari Raya the app quietly changed quantities and we spent two weeks processing refunds. If you can't do what they asked, say so and leave their cart alone."
+**Priya Nair, Operations manager**
+> "Stop the duplicates. If an idea with the same title is already there, refuse it and tell them to vote for the existing one instead. 'Reusable Parcel Bags' and 'reusable parcel bags ' are the same idea."
+
+**Marcus Lim, Corporate Communications**
+> "Don't block duplicates, we can merge them later. And add an 'Other' category so nobody gets stuck."
 >
-> "When a customer calls, I need to see the product name and the price they were shown, not just a code."
+> "While you're in there: can the portal write an AI summary of each idea? It's basically one API call."
 
 **Farid Osman, Finance**
-> "Ringgit, two decimal places, exact. I never want to see `RM 0.30000000004` on a screen again."
+> "No voting for your own idea. Otherwise every idea starts with one vote and the ranking means nothing."
 >
-> "No pricing rules go into the cart until Finance signs off the promotions engine. That's planned for next quarter. Cart prices are list prices from the catalog."
+> "Managers' votes should count three times. They know what's realistic."
 
 ---
 
 ## Follow-up messages
 
 **Aina Rahman, Tuesday, in the project channel**
-> "On the quantity question: the B2B channel launches next year and corporate orders go through the sales desk until then. So Priya's limit applies to the app."
+> "Anonymous ideas: People and Culture is reviewing the policy, so not in this release. Every idea needs a staff ID from the staff list."
+>
+> "Duplicates: Priya is right. One idea, one place. Same title, ignoring capitals and spaces at the ends, is refused."
 
-**Marcus Lim, Tuesday**
-> "Fine on the limit. Still think the 3-for-10% promo is worth slipping in, though. Nobody would notice."
+**Daniel Wong, Tuesday**
+> "Fine, 80 characters is the limit, but I hear Siti. Reject it and let them shorten it, don't cut it."
 
-**Daniel Wong, Wednesday**
-> "Updated the cart screen mock-up. The app team builds against `api-contract.md`, so whatever we return there is what the screen shows."
+**Aina Rahman, Wednesday**
+> "On votes: one person, one vote per idea, and Farid is right about own ideas. Everyone's vote counts the same. That's the whole point."
+>
+> "When two ideas have the same number of votes, the one submitted first ranks higher. First to raise it gets the credit."
+
+**Marcus Lim, Wednesday**
+> "OK on duplicates. Still think the AI summary would be a quick win, though."

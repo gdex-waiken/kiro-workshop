@@ -1,6 +1,6 @@
-# 4.1 Set up
+# 6.1 Set up
 
-**11:20 – 11:30.** Same teams, swap the Driver.
+**11:35 – 11:45.** Same teams, swap the Driver.
 
 ## Step 1: Turn off Kiro Workflows first
 
@@ -114,7 +114,7 @@ kiro-cli
 
 ```bash
 python --version          # Python 3.12.x
-python check_cart.py      # "Cannot reach http://localhost:8000 ... Is the service running?"
+python check_ideas.py     # "Cannot reach http://127.0.0.1:8000 ... Is the service running?"
 ```
 
 "Cannot reach" is correct: there's no service yet. It proves the checker runs.
@@ -125,7 +125,7 @@ Start a **new chat session** (not Spec mode) and paste exactly:
 
 ::: tip Copy this
 ```text
-Using AI-DLC, build the KedaiKu cart service described in ticket.md: Feature 1 (add items to cart and view the cart) only. Follow vision-document.md, stakeholder-notes.md, technical-environment.md and api-contract.md. The service must pass check_cart.py. This is a greenfield project.
+Using AI-DLC, build the Pelita Ideas service described in ticket.md: Feature 1 (submit and browse ideas) only. Follow vision-document.md, stakeholder-notes.md, technical-environment.md and api-contract.md. The service must pass check_ideas.py. This is a greenfield project.
 ```
 :::
 
@@ -139,4 +139,4 @@ No welcome message? Check two things, then start a **new** session:
 1. The rules are in the right folder (Step 3).
 2. Workflows is off (Step 1). If Kiro says it's starting a **workflow**, or a **Workflows** panel opens, it's still on.
 
-**Next:** [4.2 Questions and conflicts](./2-inception)
+**Next:** [6.2 Questions and conflicts](./2-inception)

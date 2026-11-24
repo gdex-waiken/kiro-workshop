@@ -1,6 +1,6 @@
-# 4. AI-DLC: Kiro leads, people approve
+# 6. AI-DLC: Kiro leads, people approve
 
-**11:20 – 12:20 · Hands-on, 1 hour · Kiro IDE.** Same cart, built again. This time Kiro asks before it assumes.
+**11:35 – 12:35 · Hands-on, 1 hour · Kiro IDE.** Feature 1 again, from an empty folder: a **greenfield** project. This time Kiro asks before it assumes.
 
 ## Reverse the conversation
 
@@ -56,22 +56,23 @@ AI-DLC comes as a set of rules from [awslabs/aidlc-workflows](https://github.com
 
 | Stage | Produces | Today |
 |---|---|---|
-| Workspace Detection | Spots existing code | runs |
+| Workspace Detection | Spots existing code | runs: finds none |
+| Reverse Engineering | Documents existing code | skipped here (no code yet), runs in [Chapter 7](../07-brownfield) |
 | **Requirements Analysis** | Requirements and the extension question | the big one |
 | User Stories | Stories with acceptance criteria | keep it short |
 | **Workflow Planning** | Which stages run and which are skipped | **trim it** |
 | Application Design | Components and boundaries | keep it small |
 | **Code Generation** | A plan, then code and tests | gated twice |
-| **Build and Test** | Full test run | then `check_cart.py` |
+| **Build and Test** | Full test run | then `check_ideas.py` |
 
 ## The plan for this hour
 
 | Time | Page | Checkpoint |
 |---|---|---|
-| 11:20 – 11:30 | [4.1 Set up](./1-set-up) | Welcome message appears |
-| 11:30 – 11:45 | [4.2 Questions and conflicts](./2-inception) | **CP1:** every conflict has a recorded decision |
-| 11:45 – 12:00 | [4.3 Plan and design](./3-plan-and-design) | **CP2:** you deleted or questioned something in the plan |
-| 12:00 – 12:20 | [4.4 Construction](./4-construction) · [4.5 The record](./5-the-record) | **CP3:** checker result on screen |
+| 11:35 – 11:45 | [6.1 Set up](./1-set-up) | Welcome message appears |
+| 11:45 – 12:00 | [6.2 Questions and conflicts](./2-inception) | **CP1 12:00:** every conflict has a recorded decision |
+| 12:00 – 12:15 | [6.3 Plan and design](./3-plan-and-design) | **CP2 12:15:** you deleted or questioned something in the plan |
+| 12:15 – 12:35 | [6.4 Construction](./4-construction) · [6.5 The record](./5-the-record) | **CP3 12:35:** `check_ideas.py` result on screen |
 
 ::: tip Behind schedule?
 Ask the facilitator for a ready-made `aidlc-docs/` up to an approved design, and jump straight to Construction.

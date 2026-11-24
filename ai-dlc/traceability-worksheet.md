@@ -1,9 +1,9 @@
 # Traceability worksheet
 
-Pick a number that `check_cart.py` checks and walk it back to the sentence that caused it. One complete chain is the goal; two is great.
+Pick a result that `check_ideas.py` checks and walk it back to the sentence that caused it. One complete chain is the goal; two is great.
 
 ```
-a number you can point at
+a result you can point at
   └─ the test that would fail if the decision flipped
       └─ the design decision
           └─ the requirement
@@ -15,7 +15,7 @@ a number you can point at
 
 | Link | Where it is (file, line or section) | What it says |
 |---|---|---|
-| The number | `cart-scenario.csv`, step | |
+| The result | `ideas-scenario.csv` or `votes-scenario.csv`, step | |
 | The test | | |
 | The design decision | `aidlc-docs/...` | |
 | The requirement | `aidlc-docs/...` | |
@@ -28,7 +28,7 @@ Where did the chain break, if anywhere?
 
 | Link | Where it is (file, line or section) | What it says |
 |---|---|---|
-| The number | `cart-scenario.csv`, step | |
+| The result | `ideas-scenario.csv` or `votes-scenario.csv`, step | |
 | The test | | |
 | The design decision | `aidlc-docs/...` | |
 | The requirement | `aidlc-docs/...` | |
@@ -37,11 +37,13 @@ Where did the chain break, if anywhere?
 
 Where did the chain break, if anywhere?
 
-## Good numbers to try
+## Good results to try
 
-| Number | Step | Hint |
+| Result | Step | Hint |
 |---|---|---|
-| `16` | 9 | Who decided what the badge counts? |
-| `422` | 8 | Why not just cap the quantity at 10? |
-| `54.00` | 9 | Why isn't there a discount on 3 notebooks? |
-| `0.30` | 4 | What would floating point have shown? |
+| `409` | 3 | Why is "  REUSABLE PARCEL BAGS  " the same idea? |
+| `422` | 5 | Why not just cut the title to 80 characters? |
+| `422` | 8 | Why can't a shy junior submit without a name? |
+| `422` | 7 | Why is there no "Other" category? |
+| `409` | votes step 3 | Why not just ignore a second tap and say OK? |
+| `A` before `B` | votes step 10 | Two ideas with 2 votes each: who decided the order? |

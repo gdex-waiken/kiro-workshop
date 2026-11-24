@@ -1,10 +1,10 @@
-# 3. Spec-driven development
+# 5. Spec-driven development
 
-**10:05 – 11:05 · Hands-on, 1 hour · Kiro IDE.** Plan it, approve it, build it, check it, fix it.
+**10:20 – 11:20 · Hands-on, 1 hour · Kiro IDE.** Plan it, approve it, build it, check it, fix it. You build **Feature 1** of Pelita Ideas: submit and browse ideas.
 
-![Kiro IDE with the kedaiku-cart spec open](/images/kiro-ide-spec.png){.shot .wide}
+![Kiro IDE with a spec open](/images/kiro-ide-spec.png){.shot .wide}
 
-*What you'll have by 11:05: the steering files and the three spec files in the explorer, `tasks.md` open with **Start task** and **Run all tasks**, and the chat on the right.*
+*What you'll have by 11:20: the steering files and the three spec files in the explorer, `tasks.md` open with **Start task** and **Run all tasks**, and the chat on the right.*
 
 ## A spec-driven workspace has two layers
 
@@ -21,14 +21,16 @@ spec-driven/
 │   │   ├── tech.md               the stack and the hard technical rules
 │   │   └── structure.md          folders, naming, run commands
 │   └── specs/
-│       └── kedaiku-cart/         ← Kiro creates this in 3.1 to 3.3, you approve each file
-│           ├── requirements.md   1. what the cart must do
+│       └── pelita-ideas/         ← Kiro creates this in 5.1 to 5.3, you approve each file
+│           ├── requirements.md   1. what the service must do
 │           ├── design.md         2. how it will be built
 │           └── tasks.md          3. the step-by-step build list
-├── ticket.md                     the request from the Product team
+├── Pelita-Ideas-Proposal.pdf     the brief from Product
+├── ticket.md                     the two features, with acceptance criteria
 ├── api-contract.md               the API the app team already built against
-├── sample-data/                  the catalog and the answer key
-└── check_cart.py                 replays the answer key against your service
+├── technical-environment.md      the platform standards and what is prohibited
+├── sample-data/                  the staff list, the categories and the answer keys
+└── check_ideas.py                replays the answer key against your service
 ```
 
 ## Steering: the three foundation files
@@ -37,9 +39,9 @@ Kiro sends these with **every** request, so it follows your stack and convention
 
 | File | Holds | In this workshop |
 |---|---|---|
-| `product.md` | Purpose, users, key features, scope | KedaiKu's cart: add items and view the cart. Checkout, payment, login and a database are out of scope |
-| `tech.md` | Frameworks, libraries, hard rules | Python 3.12, FastAPI, pytest, in-memory storage, money as `Decimal` |
-| `structure.md` | Folders, naming, run commands | `app/` (domain, application, adapters) and `tests/`. Run with `uvicorn app.main:app --port 8000` |
+| `product.md` | Purpose, users, key features, scope | Pelita Ideas: submit ideas, list them newest first, open one. Voting comes later. Comments, login, a database and AI features are out of scope |
+| `tech.md` | Frameworks, libraries, hard rules | Python 3.12, FastAPI, pytest, in-memory storage, times in UTC ending in `Z` |
+| `structure.md` | Folders, naming, run commands | `app/` (domain, application, adapters) and `tests/`. Run with `uvicorn app.main:app --port 8000`, check with `python check_ideas.py` |
 
 Each file starts with a front matter block that says when Kiro loads it:
 
@@ -63,7 +65,7 @@ Instead of jumping to code, Kiro writes three markdown files in `.kiro/specs/<na
 
 | # | File | Holds | You check |
 |---|---|---|---|
-| 1 | `requirements.md` | User stories and acceptance criteria in **EARS** form: `WHEN … THE SYSTEM SHALL …` | Is every criterion testable? Did Kiro add anything you didn't ask for? |
+| 1 | `requirements.md` | Requirements and acceptance criteria in **EARS** form: `WHEN … THE SYSTEM SHALL …` | Is every criterion testable? Did Kiro add anything you didn't ask for? |
 | 2 | `design.md` | Components, data, errors and the test plan | Do the decisions point back to the requirements? Does it follow `tech.md`? |
 | 3 | `tasks.md` | A short checklist, each task linked to the requirements it covers | Small enough to review? Tests first? |
 
@@ -79,11 +81,11 @@ A bug fix uses the same three steps, with `bugfix.md` in place of `requirements.
 
 | Step | Page | Time |
 |---|---|---|
-| Create the spec | [3.1](./1-create-the-spec) | 10 min |
-| Review the requirements | [3.2](./2-requirements) | 10 min |
-| Review design and tasks | [3.3](./3-design-and-tasks) | 10 min |
-| Build, run and check | [3.4](./4-build-and-check) | 20 min |
-| Fix what fails | [3.5](./5-fix-errors) | 10 min |
+| Create the spec | [5.1](./1-create-the-spec) | 10 min |
+| Review the requirements | [5.2](./2-requirements) | 10 min |
+| Review design and tasks | [5.3](./3-design-and-tasks) | 10 min |
+| Build, run and check | [5.4](./4-build-and-check) | 20 min |
+| Fix what fails | [5.5](./5-fix-errors) | 10 min |
 
 ::: info Sources
 AWS workshop *Kiro – Getting Started*, Lab 12 Part 1 · kiro.dev/docs/specs · kiro.dev/docs/steering

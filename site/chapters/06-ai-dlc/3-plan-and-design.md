@@ -1,6 +1,6 @@
-# 4.3 Plan and design
+# 6.3 Plan and design
 
-**11:45 – 12:00 · Checkpoint 2 at 12:00.**
+**12:00 – 12:15 · Checkpoint 2 at 12:15.**
 
 ## Every stage ends at a gate
 
@@ -16,15 +16,17 @@ proceed
 
 ## Trim the plan
 
-**AI over-builds.** Ask for a cart and it may plan a whole shop.
+**AI over-builds.** Ask for an idea list and it may plan login, comments, an admin page, a database and AI tagging. Delete everything the ticket didn't ask for, at the gate.
 
 | What Kiro might plan | Your call |
 |---|---|
-| Add items to the cart | Keep: in the ticket |
-| View the cart and subtotal | Keep: in the ticket |
-| Remove items from the cart | Later: stretch goal |
-| User login and accounts | Delete: out of scope |
-| Checkout and payment | Delete: out of scope |
+| Submit an idea | Keep: in the ticket |
+| List ideas newest first, open one idea | Keep: in the ticket |
+| Vote and rank | Later: Feature 2, in [Chapter 7](../07-brownfield) |
+| Login and user accounts | Delete: out of scope |
+| Comments, editing, attachments | Delete: out of scope |
+| An admin page | Delete: nobody asked for it |
+| AI tagging or summaries | Delete: out of scope, and no calls to outside services |
 | A database | Delete: prohibited |
 
 ::: tip Prompt: request changes to the plan
@@ -38,16 +40,18 @@ Request changes: remove <stage or task> from the execution plan. It isn't in tic
 | Check | Look for |
 |---|---|
 | Three layers | `domain`, `application`, `adapters` |
-| Money | `Decimal`, never `float` |
+| Time | `submitted_at` in UTC, ISO 8601, ending in `Z` |
+| Reference data | Names and departments come from `staff.csv`, never from the client. Categories from `categories.csv` |
 | Storage | In memory, behind a repository interface |
-| Nothing prohibited | No database, Docker, login or new endpoint |
+| Your decisions | The 80-character limit, the duplicate rule and the fixed category list each appear in the design |
+| Nothing prohibited | No database, Docker, login, outside calls or new endpoint |
 
 ## Code generation is gated twice
 
 First Kiro shows a **code-generation plan**, and only after you approve it does it write code. Check the plan as carefully as the code: a wrong approach is cheapest to fix here.
 
-::: info Checkpoint 2 (12:00)
+::: info Checkpoint 2 (12:15)
 You deleted or questioned at least one thing in the plan, and said why at the gate. The design has no database, Docker or login.
 :::
 
-**Next:** [4.4 Construction](./4-construction)
+**Next:** [6.4 Construction](./4-construction)

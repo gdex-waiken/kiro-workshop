@@ -1,6 +1,6 @@
 # 1. Meet Kiro
 
-**9:30 – 9:50 · Talk and demo.** By the end of this chapter you know which Kiro to open for which job.
+**9:30 – 9:50 · Talk and demo.** By the end of this chapter you know which Kiro to open for which job, and you've seen a spec go from prompt to task list.
 
 <img src="/images/kiro-ghost.png" alt="The Kiro ghost" class="mascot-float" />
 
@@ -18,50 +18,19 @@ Kiro is an AI teammate from AWS that plans, writes, tests and fixes software. On
   <figure><img src="/images/icon-crew.png" alt="Kiro Crew" /><figcaption>Crew</figcaption></figure>
 </div>
 
+Today we go deep on two of them: the **IDE**, where you'll work all morning, and **Crew**, for work that carries on after you close the chat.
+
 ## Kiro IDE: build and review at your desk
 
 A desktop editor built on a VS Code foundation. It's where you'll work today.
 
-![Kiro IDE with the kedaiku-cart spec open: steering and spec files on the left, the tasks list in the middle, the chat and its built-in agents on the right](/images/kiro-ide-spec.png){.shot .wide}
+![Kiro IDE with a spec open: steering and spec files on the left, the tasks list in the middle, the chat and its built-in agents on the right](/images/kiro-ide-spec.png){.shot .wide}
 
-*Kiro IDE with a spec open. Left: `.kiro/steering/` and `.kiro/specs/kedaiku-cart/`. Middle: `tasks.md` with **Start task** and **Run all tasks**. Right: the chat, with the built-in Spec, Plan, Bug Fix and Quick Spec agents.*
+*Kiro IDE with a spec open. Left: `.kiro/steering/` and `.kiro/specs/<feature>/`. Middle: `tasks.md` with **Start task** and **Run all tasks**. Right: the chat, with the built-in Spec, Plan, Bug Fix and Quick Spec agents.*
 
 - **Specs:** requirements, design and tasks, reviewed in the editor.
 - **Chat** with full project context, plus built-in agents: Spec, Plan, Bug Fix and Quick Spec.
 - **Hooks, steering, skills and MCP servers** in the Kiro panel.
-
-## Kiro CLI: the agent in your terminal
-
-The same agent, in your terminal. Use it over SSH, in scripts, or as a headless step in a CI/CD pipeline.
-
-![Kiro CLI V3 asking to trust a workspace](/images/kiro-cli-v3.png){.shot .wide}
-
-```bash
-curl -fsSL https://cli.kiro.dev/install | bash
-kiro-cli
-```
-
-The first time you start it in a folder, Kiro asks whether to trust the workspace. Trust only folders you mean Kiro to work in.
-
-## Kiro Web: hand over a task, get a pull request back
-
-A browser agent at **app.kiro.dev**. Every task runs in its own isolated sandbox, and Kiro never merges on its own: you review the pull request.
-
-![Kiro Web: a finished task that opened pull requests in five repositories](/images/kiro-web-full.png){.shot .wide}
-
-*Kiro Web after a task across five repositories, with the pull requests it opened. Screenshot: Kiro First Call Deck (names blurred).*
-
-| Mode | Use it for |
-|---|---|
-| **Default** | Chat and build together |
-| **Spec** | Plan before it builds |
-| **Autonomous** | A clear feature, a reproducible bug, tests for existing code: Kiro plans, builds with sub-agents and opens the PR |
-
-You can also start work from GitHub: add the `kiro` label to an issue, or comment `/kiro`. Kiro Web needs a Pro plan or higher.
-
-## Kiro Mobile
-
-Check on tasks, review pull requests and chat with your agent on the go. You can read a session's spec files there too.
 
 ## Kiro Crew: a workspace that keeps working
 
@@ -89,6 +58,43 @@ A **bot** is a conductor: it does short tasks itself, briefs **workers** for lon
 
 *The "CEO Boss" bot drives AWS Cloud Architect, Data Engineer and DevOps/IaC sessions.*
 
+## The other surfaces, one line each
+
+| Surface | In one line |
+|---|---|
+| **Kiro CLI** | The same agent in your terminal: over SSH, in scripts, or as a headless step in a CI/CD pipeline |
+| **Kiro Web** | A browser agent at **app.kiro.dev**: hand over a task, get a pull request back from an isolated sandbox |
+| **Kiro Mobile** | Check on tasks, review pull requests and read a session's spec files on the go |
+
+::: details More on Kiro CLI and Kiro Web
+**Kiro CLI**
+
+![Kiro CLI V3 asking to trust a workspace](/images/kiro-cli-v3.png){.shot .wide}
+
+```bash
+curl -fsSL https://cli.kiro.dev/install | bash
+kiro-cli
+```
+
+The first time you start it in a folder, Kiro asks whether to trust the workspace. Trust only folders you mean Kiro to work in.
+
+**Kiro Web**
+
+Every task runs in its own isolated sandbox, and Kiro never merges on its own: you review the pull request.
+
+![Kiro Web: a finished task that opened pull requests in five repositories](/images/kiro-web-full.png){.shot .wide}
+
+*Kiro Web after a task across five repositories, with the pull requests it opened. Screenshot: Kiro First Call Deck (names blurred).*
+
+| Mode | Use it for |
+|---|---|
+| **Default** | Chat and build together |
+| **Spec** | Plan before it builds |
+| **Autonomous** | A clear feature, a reproducible bug, tests for existing code: Kiro plans, builds with sub-agents and opens the PR |
+
+You can also start work from GitHub: add the `kiro` label to an issue, or comment `/kiro`. Kiro Web needs a Pro plan or higher.
+:::
+
 ## Which one, when?
 
 | You want to… | Open |
@@ -97,6 +103,19 @@ A **bot** is a conductor: it does short tasks itself, briefs **workers** for lon
 | Work in the terminal, over SSH, or in a CI pipeline | **Kiro CLI** |
 | Say "come back with a pull request" | **Kiro Web**, autonomous mode |
 | Keep something watched and reported on for days | **Kiro Crew** |
+
+## Demo: a spec, from prompt to task list
+
+The facilitator builds a small spec live in Kiro IDE, so you've seen the whole flow once before you run it yourselves in [Chapter 5](./05-spec/).
+
+| Step | What to watch for |
+|---|---|
+| **Steering** | The `.kiro/steering/` files Kiro reads with every request |
+| **Requirements** | `requirements.md` in `WHEN … THE SYSTEM SHALL …` form, and Kiro stopping for review |
+| **Design** | `design.md`, with each decision pointing back to a requirement |
+| **Tasks** | A short `tasks.md`, each task linked to the requirements it covers |
+
+The finished reference spec is in the repo's `spec-demo/` folder if you want to read it afterwards.
 
 ::: tip Try it
 Open Kiro IDE and ask the chat:

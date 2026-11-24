@@ -1,29 +1,26 @@
-# The ticket: KedaiKu shopping cart API
+# The ticket: Pelita Ideas portal
 
-Raised by **Aina Rahman, Head of Product**. This is the ticket as the product team wrote it. It is short on purpose: the details live in `stakeholder-notes.md`.
+Raised by **Aina Rahman, Head of Innovation**. This is the ticket as the innovation team wrote it. It is short on purpose: the details live in `stakeholder-notes.md`.
 
-## Feature 1 – Add items to the cart
+## Feature 1 – Submit and browse ideas (this morning, greenfield)
 
-**As a customer, I want to add items to my shopping cart, so that I can collect items I intend to purchase.**
-
-Acceptance criteria:
-
-- I can add an item with a specified quantity to my cart
-- The cart should display the updated item count
-- The cart should show the item details (product name, price, quantity)
-- The cart should calculate and display the subtotal
-
-## Feature 2 – Remove items from the cart (stretch goal, only if Feature 1 is done)
-
-**As a customer, I want to remove items from my shopping cart, so that I can adjust my intended purchases.**
+Staff need one place to send improvement ideas, and to see what colleagues have already sent.
 
 Acceptance criteria:
 
-- I can remove a specific item completely from the cart
-- The cart should update the total item count
-- The cart should recalculate and display the updated subtotal
+- A staff member can submit an idea with a title, a short description and a category
+- The portal lists every idea, newest first
+- Each idea shows who submitted it and their department
+- Anyone can open one idea and see all its details
 
-Build **one feature at a time**. Start with Feature 1.
+## Feature 2 – Vote and rank ideas (afternoon, brownfield)
 
----
-User stories adapted from the AWS workshop *Kiro – Getting Started*, Code Challenge (catalog.workshops.aws/q-zero2hero/en-US/96-code-challenge).
+Staff decide together which ideas the innovation committee looks at first.
+
+Acceptance criteria:
+
+- A staff member can vote for an idea
+- Each idea shows how many votes it has
+- The portal shows a ranked list, most votes first
+
+Build **one feature at a time**. Start with Feature 1. Feature 2 is added later, to the code you already have.

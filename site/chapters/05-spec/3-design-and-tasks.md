@@ -1,4 +1,4 @@
-# 3.3 Review the design and the tasks
+# 5.3 Review the design and the tasks
 
 **About 10 minutes.**
 
@@ -7,9 +7,10 @@
 | Check | Look for |
 |---|---|
 | Three layers | `domain`, `application`, `adapters`, as `tech.md` says |
-| Money | `Decimal`, never `float` |
+| Time | `submitted_at` in UTC, ISO 8601, ending in `Z` |
+| Reference data | Names and departments looked up in `staff.csv`, never taken from the request. Categories from `categories.csv` |
 | Decisions point back to requirements | Each design choice names the criterion it satisfies |
-| Nothing extra | No database, login, checkout or new endpoint |
+| Nothing extra | No database, login, comments, AI tagging or new endpoint |
 
 ::: tip Prompt: approve the design
 ```text
@@ -39,13 +40,13 @@ Or run all required tasks at once.
 
 ```text [Kiro CLI]
 Choose "Run required tasks" at the review question.
-Resume later with:  /spec run kedaiku-cart
+Resume later with:  /spec run pelita-ideas
 ```
 
 :::
 
 ::: warning One task at a time while you're learning
-You see what each task changes, and what it costs. Running everything at once on a long plan recreates the "more agents, more tokens" problem from Chapter 6.
+You see what each task changes, and what it costs. Running everything at once on a long plan recreates the "more agents, more tokens" problem from [Chapter 2](../02-extend-kiro).
 :::
 
-**Next:** [3.4 Build and check](./4-build-and-check)
+**Next:** [5.4 Build and check](./4-build-and-check)

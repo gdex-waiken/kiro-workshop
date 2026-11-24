@@ -14,12 +14,12 @@ inclusion: always
 ## Architecture: Clean Architecture
 - Three layers: `domain` -> `application` -> `adapters`. Dependencies point inward only.
 - `domain`: entities and business rules. Standard library only. No FastAPI, no Pydantic.
-- `application`: use cases. They talk to storage only through ports (abstract base classes).
-- `adapters`: FastAPI routes, Pydantic schemas, in-memory repositories.
+- `application`: use cases. They talk to storage and the clock only through ports (abstract base classes).
+- `adapters`: FastAPI routes, Pydantic schemas, in-memory repositories, the system clock.
 - Wire concrete adapters together in one place: `create_app()`.
 
 ## Coding rules
-- Money is `decimal.Decimal`, never `float`. Return money in JSON as strings with 2 decimals (`"19.98"`).
+- Times are UTC, ISO 8601, ending in `Z` (`"2026-12-09T03:31:07Z"`). Get the time from the clock port, never straight from `datetime.now()` in a use case.
 - Type hints on every function and method.
 - Domain errors are plain exceptions. Map them to HTTP status codes only in the HTTP adapter.
 - Validate input at the boundary (Pydantic) **and** protect invariants in the domain.
