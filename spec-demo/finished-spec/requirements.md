@@ -1,39 +1,36 @@
-# Requirements: Add items to cart
+# Requirements: Submit and list ideas
 
 ## Introduction
-A customer adds a product with a quantity to a cart and gets back the updated cart: its lines, item count and subtotal. This spec covers adding and viewing only. Removing items is a separate spec.
+Staff submit an idea with a title and a description and get the stored idea back. Anyone can list all ideas, newest first. This spec covers submitting and listing only. Opening one idea is a separate spec.
 
 ## Glossary
-- **Cart**: a set of lines, identified by a client-chosen `cart_id`.
-- **Line**: one product in the cart with its quantity.
-- **Catalog**: the source of product name and unit price.
-- **Item count**: sum of the quantities of all lines.
-- **Subtotal**: sum of unit price x quantity over all lines.
+- **Idea**: a title and a description, with an `idea_id` and a `created_at` time set by the service.
+- **Idea list**: every stored idea, newest first.
+- **Newest first**: the idea submitted last comes first.
 
-## Requirement 1: Add an item
-**User story:** As a customer, I want to add a product with a quantity to my cart, so that I can collect items I intend to buy.
+## Requirement 1: Submit an idea
+**Goal:** staff can send an idea and see it stored exactly as they wrote it.
 
 **Acceptance criteria**
-1. WHEN a customer adds a catalog product with quantity 1 or more THE SYSTEM SHALL add a line with that product and quantity.
-2. WHEN the product is already in the cart THE SYSTEM SHALL increase that line's quantity and SHALL NOT create a second line.
-3. WHEN the `cart_id` does not exist yet THE SYSTEM SHALL create the cart, then add the item.
-4. WHEN an item is added THE SYSTEM SHALL return the full updated cart.
+1. WHEN someone submits a title of 1 to 100 characters that is not only spaces, and a description of 1 to 1000 characters, THE SYSTEM SHALL store the idea and return it with status 201.
+2. WHEN an idea is stored THE SYSTEM SHALL give it a new `idea_id` and set `created_at` to the current UTC time, ending in `Z`.
+3. WHEN an idea is stored THE SYSTEM SHALL keep the title and description exactly as sent.
 
-## Requirement 2: Show cart details
-**User story:** As a customer, I want to see what is in my cart, so that I can check what I am buying.
+## Requirement 2: List ideas
+**Goal:** anyone can see every idea, the latest at the top.
 
 **Acceptance criteria**
-1. WHEN a cart is returned THE SYSTEM SHALL include, for each line, `product_id`, `name`, `unit_price` and `quantity`.
-2. WHEN a cart is returned THE SYSTEM SHALL include the item count.
-3. WHEN a cart is returned THE SYSTEM SHALL include the subtotal, calculated with `Decimal` and shown with 2 decimals.
-4. WHEN a customer requests a cart that does not exist THE SYSTEM SHALL return a not-found error.
+1. WHEN someone requests the list THE SYSTEM SHALL return every idea, newest first.
+2. WHEN the list is returned THE SYSTEM SHALL include the number of ideas as `count`.
+3. WHEN an idea is returned THE SYSTEM SHALL include its `idea_id`, `title`, `description` and `created_at`.
+4. WHEN no ideas exist THE SYSTEM SHALL return an empty list with `count` 0.
 
 ## Requirement 3: Reject bad input
-**User story:** As a customer, I want clear errors for bad input, so that my cart never holds wrong data.
+**Goal:** the list never holds an idea nobody can read.
 
 **Acceptance criteria**
-1. IF the quantity is less than 1 THEN THE SYSTEM SHALL return a validation error and leave the cart unchanged.
-2. IF the `product_id` is not in the catalog THEN THE SYSTEM SHALL return a not-found error that names the id and leave the cart unchanged.
+1. IF the title is empty, only spaces or longer than 100 characters THEN THE SYSTEM SHALL return a validation error and store nothing.
+2. IF the description is missing, empty or longer than 1000 characters THEN THE SYSTEM SHALL return a validation error and store nothing.
 
 ## Out of scope
-Removing items, changing quantity directly, stock checks, checkout, login, persistent storage.
+Opening one idea, voting, comments, editing, deleting, categories, authors, login, persistent storage.

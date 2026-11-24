@@ -6,9 +6,9 @@ inclusion: always
 
 ```
 app/
-├── domain/          # Cart, CartLine, errors
-├── application/     # ports and use cases: AddItemToCart, GetCart
-├── adapters/        # FastAPI routes and schemas, in-memory repository, catalog loader
+├── domain/          # Idea, errors, business rules
+├── application/     # ports and use cases: SubmitIdea, ListIdeas, GetIdea
+├── adapters/        # FastAPI routes and schemas, in-memory repository, staff and category loaders
 └── main.py          # create_app() and the module-level `app`
 tests/               # mirrors app/: domain, application, adapters
 ```
@@ -21,4 +21,4 @@ tests/               # mirrors app/: domain, application, adapters
 ## Run commands
 - Tests: `pytest`
 - Service: `uvicorn app.main:app --port 8000`
-- Answer key: `python check_cart.py` (with the service running)
+- Answer key: `python check_ideas.py` (with the service running)

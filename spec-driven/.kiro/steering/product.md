@@ -2,28 +2,28 @@
 inclusion: always
 ---
 
-# Product: KedaiKu cart service
+# Product: Pelita Ideas
 
 ## Purpose
-The backend for the shopping cart in the KedaiKu mobile app. A workshop MVP: small, correct and easy to extend.
+The backend for Pelita Ideas, the staff idea portal at Pelita Group (a fictional logistics company). A workshop MVP: small, correct and easy to extend.
 
 ## Users
-- **Customer**, through the mobile app: adds products to a cart and views it.
+- **Staff**, through the portal: submit ideas and browse them. Later: vote.
 - **Developer** (workshop participant): runs and extends the service locally.
 
 ## Features
 | Feature | Status |
 |---|---|
-| Add a product with a quantity to a cart | MVP, build first |
-| View a cart: lines, item count, subtotal | MVP |
-| Remove a product from a cart | Stretch, only after the MVP passes |
-| Checkout, payment, login, promotions, database | Out of scope |
+| Submit an idea (title, description, category) | MVP, build first |
+| List ideas, newest first; open one idea | MVP |
+| Vote for an idea and see a ranked list | Next, added later to the existing code |
+| Comments, editing, attachments, login, database, AI features | Out of scope |
 
 ## Rules we already know
 - The API is fixed: follow `api-contract.md` exactly.
-- Product names and prices come from `sample-data/catalog.csv`, never from the client.
-- A cart never has two lines for the same product.
-- Money is exact: strings with 2 decimal places in JSON.
+- Submitter names and departments come from `sample-data/staff.csv`, never from the client.
+- Categories come from `sample-data/categories.csv`.
+- A failed request changes nothing.
 
 ## Do not
 - Add features that are not in the current spec.

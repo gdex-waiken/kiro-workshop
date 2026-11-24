@@ -1,0 +1,15 @@
+step,action,idea,voter,limit,expected_status,expected_votes,expected_order,what_happens
+1,vote,A,E1002,,201,1,,the first vote
+2,vote,A,E1003,,201,2,,a second person votes
+3,vote,A,E1002,,409,2,,the same person votes again: refused and the count stays
+4,vote,A,E1001,,422,2,,voting for your own idea
+5,vote,B,E1001,,201,1,,a vote for idea B
+6,vote,B,E1003,,201,2,,B now ties with A
+7,vote,C,E1004,,201,1,,a vote for idea C
+8,vote,missing,E1005,,404,,,an idea nobody submitted
+9,vote,D,E9999,,422,0,,a voter who is not in staff.csv
+10,rank,,,50,200,,A|B|C|D,a tie: the idea submitted first ranks first
+11,vote,B,E1005,,201,3,,B moves ahead
+12,rank,,,50,200,,B|A|C|D,the new order
+13,rank,,,2,200,,,only the top 2
+14,rank,,,0,422,,,a limit outside 1 to 50

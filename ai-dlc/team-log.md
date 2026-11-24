@@ -6,8 +6,9 @@ Team name:
 
 | Time | Driver | Product Owner | Reviewer | Scribe |
 |---|---|---|---|---|
-| 9:50 | | | | |
-| 11:20 (after break) | | | | |
+| 10:20 | | | | |
+| 11:35 (after break) | | | | |
+| 12:50 (brownfield) | | | | |
 
 ## Extension decision (Requirements Analysis)
 
@@ -30,6 +31,10 @@ Write the decision **and the reason**, with the source (file and person).
 | 3 | | | |
 | 4 | | | |
 | 5 | | | |
+| 6 | | | |
+| 7 | | | |
+| 8 | | | |
+| 9 | | | |
 
 ## Requests we refused
 
@@ -46,6 +51,9 @@ Write the decision **and the reason**, with the source (file and person).
 | Workflow Planning | | |
 | Application Design | | |
 | Construction | | |
+| Feature 2: Reverse Engineering | | |
+| Feature 2: Requirements Analysis | | |
+| Feature 2: Construction | | |
 
 ## Hand edits
 
@@ -55,7 +63,7 @@ Any file you changed yourself, outside the workflow, and when you told Kiro.
 |---|---|---|
 | | | |
 
-## Retro (1:20)
+## Retro (1:10)
 
 - 3 things AI-DLC did well:
 - 3 frictions:

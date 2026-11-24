@@ -7,14 +7,14 @@ inclusion: always
 ```
 app/
 ├── domain/
-│   ├── models.py          # Product, CartItem, Cart
+│   ├── models.py          # Idea
 │   └── errors.py          # DomainError and its subclasses
 ├── application/
-│   ├── ports.py           # CartRepository, ProductCatalog (ABCs)
-│   ├── dtos.py            # CartView, CartLineView (read models)
-│   └── use_cases.py       # AddItemToCart, GetCart, ...
+│   ├── ports.py           # IdeaRepository, Clock (ABCs)
+│   ├── dtos.py            # IdeaView, IdeaListView (read models)
+│   └── use_cases.py       # SubmitIdea, ListIdeas, ...
 └── adapters/
-    ├── repositories.py    # InMemoryCartRepository, InMemoryProductCatalog, seed products
+    ├── repositories.py    # InMemoryIdeaRepository, SystemClock
     ├── api.py             # Pydantic schemas, APIRouter, error handlers
     └── main.py            # create_app() and module-level `app`
 tests/
@@ -31,9 +31,9 @@ tests/
 
 ## Naming
 - Modules and functions: `snake_case`. Classes: `PascalCase`.
-- Use cases are verbs: `AddItemToCart`, `RemoveItemFromCart`. One public method: `execute(...)`.
-- Errors end in `Error`: `ProductNotFoundError`.
-- Test files: `test_<subject>.py`. Test names say the behaviour: `test_adding_same_product_twice_merges_lines`.
+- Use cases are verbs: `SubmitIdea`, `ListIdeas`. One public method: `execute(...)`.
+- Errors end in `Error`: `InvalidIdeaError`.
+- Test files: `test_<subject>.py`. Test names say the behaviour: `test_list_shows_newest_idea_first`.
 
 ## Run commands
 - Tests: `pytest`

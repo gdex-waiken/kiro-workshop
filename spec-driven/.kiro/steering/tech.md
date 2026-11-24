@@ -14,13 +14,13 @@ inclusion: always
 - Three layers: `domain` -> `application` -> `adapters`. Dependencies point inward only.
 - `domain`: entities and business rules. Standard library only.
 - `application`: use cases. They reach storage only through ports (abstract base classes).
-- `adapters`: FastAPI routes, Pydantic schemas, in-memory repositories, the catalog loader.
+- `adapters`: FastAPI routes, Pydantic schemas, in-memory repositories, the CSV loaders.
 
 ## Coding rules
-- Money is `decimal.Decimal`, never `float`.
+- Times are UTC, ISO 8601, ending in `Z`.
 - Type hints on every function.
 - Domain errors are plain exceptions, mapped to HTTP status codes only in the HTTP adapter.
-- A failed request leaves the cart exactly as it was.
+- A failed request leaves everything exactly as it was.
 - Keep `requirements.txt` up to date.
 
 ## Working rules

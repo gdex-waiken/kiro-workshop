@@ -1,0 +1,14 @@
+step,action,ref,title,category,submitted_by,expected_status,expected_count,expected_order,what_happens
+1,submit,,Weekly route review with drivers,Process,E1001,201,1,,the first idea
+2,submit,,Reusable parcel bags,Sustainability,E1002,201,2,,a second idea
+3,submit,,  REUSABLE PARCEL BAGS  ,Sustainability,E1003,409,2,,the same title again in capitals with extra spaces
+4,submit,,   ,Process,E1001,422,2,,a blank title
+5,submit,,<81>,Customer experience,E1004,422,2,,a title one character too long: refused and not cut
+6,submit,,<80>,Customer experience,E1004,201,3,,a title of exactly 80 characters
+7,submit,,Free lunch Fridays,Other,E1005,422,3,,a category that is not on the list
+8,submit,,Night-shift safety vests,Safety,,422,3,,no staff ID: anonymous ideas wait for a later release
+9,submit,,Night-shift safety vests,Safety,E9999,422,3,,a staff ID that is not in staff.csv
+10,submit,,Night-shift safety vests,Safety,E1006,201,4,,a fourth idea
+11,list,,,,,200,4,10|6|2|1,the list is newest first
+12,get,2,,,,200,4,,one idea with its submitter's name and department
+13,get,missing,,,,404,4,,an idea nobody submitted

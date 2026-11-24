@@ -1,25 +1,6 @@
-# 5. Which way to build?
+# 3. Vibe, spec or AI-DLC?
 
-**12:35 – 12:55 · Discussion.** You've built the same cart twice. Now put the two results side by side.
-
-## Compare your two builds
-
-From the repo root:
-
-```bash
-# What each process left on disk
-ls spec-driven/.kiro/specs/ ai-dlc/aidlc-docs/
-
-# What AI-DLC recorded about itself
-head -40 ai-dlc/aidlc-docs/audit.md
-```
-
-| Question | Spec-driven (`spec-driven/`) | AI-DLC (`ai-dlc/`) |
-|---|---|---|
-| Your `check_cart.py` score | | |
-| Who stated the requirements? | Kiro drafted, you corrected | Kiro asked, you answered, then it drafted |
-| Where are the decisions recorded? | `requirements.md`, `design.md` | `aidlc-docs/`, `audit.md`, `team-log.md` |
-| Which failing steps did the stakeholder notes fix? | | |
+**10:00 – 10:10 · Discussion.** Three ways to build with Kiro, and when to use which. You'll try two of them this morning on the same feature, so decide now what you expect to see.
 
 ## Vibe coding, spec or AI-DLC: at a glance
 
@@ -42,12 +23,22 @@ More ceremony did not mean more time: in the AWS lab, AI-DLC skipped stages that
 
 They're not mutually exclusive: use a spec or AI-DLC for the big picture, then vibe-code fast iterations inside it.
 
+## What you'll do this morning
+
+| Chapter | Way of working | What you build | Where |
+|---|---|---|---|
+| [5](./05-spec/) | **Spec-driven** | Feature 1: submit and browse ideas | `spec-driven/` |
+| [6](./06-ai-dlc/) | **AI-DLC, greenfield** | Feature 1 again, from an empty folder | `ai-dlc/` |
+| [7](./07-brownfield) | **AI-DLC, brownfield** | Feature 2: vote and rank, added to your Chapter 6 code | `ai-dlc/` |
+
+Same ticket, same contract, same answer key. What changes is how much Kiro asks, and how much it writes down. You compare the results in [Chapter 8](./08-wrap-up).
+
 ## Discuss
 
-::: tip Three questions for your team
-1. Which failing step from Chapter 3 did AI-DLC get right, and which sentence in `stakeholder-notes.md` fixed it?
-2. Where did you disagree with Kiro, and was that disagreement recorded?
-3. Six months from now, which project could a new teammate pick up with confidence?
+::: tip Three questions for your team, before you start
+1. Which of the three do you use today, and for what kind of work?
+2. The spec folder gets no stakeholder notes; the AI-DLC folder does. Which build do you expect to score higher on the checker, and why?
+3. Six months from now, which project would you rather hand to a new teammate?
 :::
 
 ::: info Source

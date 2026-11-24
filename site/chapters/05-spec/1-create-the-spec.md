@@ -1,4 +1,4 @@
-# 3.1 Create the spec
+# 5.1 Create the spec
 
 **About 10 minutes.**
 
@@ -32,7 +32,7 @@ Open the **`kiro-workshop/spec-driven`** folder, not the repo root, so Kiro only
 cd kiro-workshop/spec-driven
 kiro-cli
 # inside Kiro CLI:
-/spec new kedaiku-cart
+/spec new pelita-ideas
 # then choose: Build a Feature → Requirements, and paste the prompt below
 ```
 
@@ -42,17 +42,17 @@ kiro-cli
 
 ::: tip Copy this
 ```text
-Build the KedaiKu cart service described in ticket.md and api-contract.md. Feature 1 only: add a product with a quantity to a cart, and view the cart with its lines, item count and subtotal. Product names and prices come from sample-data/catalog.csv. Keep it an MVP: at most 5 tasks, no optional tasks.
+Build the Pelita Ideas service described in ticket.md and api-contract.md. Feature 1 only: submit an idea, list every idea newest first, and open one idea. Submitter names and departments come from sample-data/staff.csv, and categories from sample-data/categories.csv. The service must pass check_ideas.py. Keep it an MVP: at most 5 tasks, no optional tasks.
 ```
 :::
 
 ## What you should see
 
-- A new folder: `.kiro/specs/kedaiku-cart/` (the name may differ).
+- A new folder: `.kiro/specs/pelita-ideas/` (the name may differ).
 - `requirements.md` opens in the editor, and Kiro stops to ask you to review it.
 
 ::: warning Kiro is not asking about stakeholders
-Notice what Kiro does **not** ask: who decides what the badge shows, or whether there's a quantity limit. Spec mode drafts first and lets you correct. Keep that in mind for Chapter 4.
+Notice what Kiro does **not** ask: how long a title may be, what happens when it's too long, or whether two ideas can share a title. Spec mode drafts first and lets you correct. Keep that in mind for Chapter 6.
 :::
 
-**Next:** [3.2 Review the requirements](./2-requirements)
+**Next:** [5.2 Review the requirements](./2-requirements)

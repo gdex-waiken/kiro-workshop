@@ -1,6 +1,6 @@
-# 4.4 Construction
+# 6.4 Construction
 
-**12:00 – 12:20 · Checkpoint 3 at 12:20.**
+**12:15 – 12:35 · Checkpoint 3 at 12:35.**
 
 ## Let Kiro build, then check it yourself
 
@@ -16,23 +16,25 @@ uvicorn app.main:app --port 8000
 ```
 
 ```bash [Terminal 2: the checker]
-python check_cart.py
+python check_ideas.py
 ```
 
 :::
 
 ```text
-PASS  step  1  add 2 x SKU-001 to cart A             (first add creates the cart)
+PASS  step  1  submit 'Weekly route review with'    (the first idea)
+PASS  step  2  submit 'Reusable parcel bags'        (a second idea)
+PASS  step  3  submit 'REUSABLE PARCEL BAGS'        (the same title again in capitals with extra spaces)
 ...
-PASS  step 15  get cart A                            (first cart is untouched)
+PASS  step 13  get an unknown idea                  (an idea nobody submitted)
 
-15/15 steps match the answer key.
+13/13 steps match the answer key (Feature 1).
 ```
 
 ## Definition of done
 
 - `pytest` passes.
-- `check_cart.py` prints **15/15**.
+- `check_ideas.py` prints **13/13**.
 - Every conflict has a decision and a reason in `team-log.md`.
 - `aidlc-docs/` shows a gate approval for every stage that ran.
 
@@ -40,7 +42,7 @@ PASS  step 15  get cart A                            (first cart is untouched)
 
 ::: tip Prompt: a failing checker step
 ```text
-check_cart.py fails step <n> (<what_happens>): <paste the problem lines>. Find the requirement and the stakeholder decision behind this step in aidlc-docs/, then fix the code with a failing test first.
+check_ideas.py fails step <n> (<what_happens>): <paste the problem lines>. Find the requirement and the stakeholder decision behind this step in aidlc-docs/, then fix the code with a failing test first.
 ```
 :::
 
@@ -52,8 +54,8 @@ check_cart.py fails step <n> (<what_happens>): <paste the problem lines>. Find t
 | Kiro plans a database, Docker or login | Delete it at the gate and point to `technical-environment.md` |
 | Running low on Kiro credits | Stop asking for explanations in chat. Read the files instead |
 
-::: info Checkpoint 3 (12:20)
-The `check_cart.py` result is on screen. Compare it with your Chapter 3 score.
+::: info Checkpoint 3 (12:35)
+The `check_ideas.py` result is on screen. Compare it with your Chapter 5 score.
 :::
 
-**Next:** [4.5 Read the record](./5-the-record)
+**Next:** [6.5 Read the record](./5-the-record)

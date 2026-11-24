@@ -2,31 +2,31 @@
 inclusion: always
 ---
 
-# Product: Shopping Cart API
+# Product: Idea List API
 
 ## Purpose
-A backend API that lets a customer build a shopping cart for an e-commerce store. It is a workshop MVP: small, correct and easy to extend.
+A backend API where staff send improvement ideas and see what others have sent. It is a workshop MVP: small, correct and easy to extend.
 
 ## Users
-- **Customer** (through a web or mobile front end): adds, views and removes items in a cart.
+- **Staff** (through a web or mobile front end): submit ideas and browse the list.
 - **Developer** (workshop participant): runs and extends the API locally.
 
 ## Features
 | Feature | Status |
 |---|---|
-| Add an item with a quantity to a cart | MVP, build first |
-| View a cart: lines, item count, subtotal | MVP |
-| Remove an item from a cart | Next |
-| Checkout, payment, tax, discounts, shipping | Out of scope |
-| User accounts, login, persistent database | Out of scope |
+| Submit an idea with a title and a description | MVP, build first |
+| List all ideas, newest first | MVP |
+| Open one idea by its id | Next |
+| Voting, comments, editing, deleting | Out of scope |
+| Categories, authors, user accounts, login, persistent database | Out of scope |
 
 ## Business rules
-- Quantity is a whole number of 1 or more.
-- Adding a product that is already in the cart increases its quantity. A cart never has two lines for the same product.
-- Item count = sum of all line quantities.
-- Subtotal = sum of unit price x quantity, exact to 2 decimal places.
-- Product names and prices come from the product catalog, never from the client.
-- One currency only.
+- The title is required: 1 to 100 characters, and not only spaces.
+- The description is required: 1 to 1000 characters.
+- The service chooses the `idea_id` and the `created_at` time, never the client.
+- What someone typed is stored exactly as typed.
+- The list shows every idea, newest first.
+- A request that fails stores nothing.
 
 ## Definition of done
 - Every acceptance criterion has a passing test.

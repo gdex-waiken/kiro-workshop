@@ -1,8 +1,8 @@
 # Spec demo (facilitator, 10 minutes, live on the projector)
 
-**Time:** inside the 9:30 – 9:50 opening. Participants watch; they do not type.
+**Time:** inside the 9:30 – 9:50 opening (Chapter 1, Meet Kiro). Participants watch; they do not type.
 
-The point: show what Kiro's built-in **spec workflow** looks like, so the class can see what AI-DLC adds on top of it. Spec mode turns a prompt into three documents and a task list. AI-DLC adds questions in files, stakeholder conflicts, an execution plan you can challenge, and a gate at every stage.
+The point: show what Kiro's built-in **spec workflow** looks like before anyone uses it. Spec mode turns a prompt into three documents and a task list. Later this morning teams use it for real (Chapter 5), then see what AI-DLC adds on top: questions in files, stakeholder conflicts, an execution plan you can challenge, and a gate at every stage.
 
 ## Before the session
 
@@ -10,7 +10,7 @@ The point: show what Kiro's built-in **spec workflow** looks like, so the class 
 - Do one dry run the day before, so the requirements come back in about a minute.
 - If the venue network is slow, skip the live generation and open `finished-spec/` instead.
 
-> This demo uses a generic cart, not the KedaiKu stakeholder notes. Don't open `stakeholder-notes.md` here: the conflicts in it are the hands-on exercise.
+> This demo uses a generic idea list, not Pelita Ideas. No staff list, no categories, no votes. Don't open the Pelita `stakeholder-notes.md` here: the conflicts in it are the hands-on exercise.
 
 ## The demo, step by step
 
@@ -29,12 +29,12 @@ Open `.kiro/steering/` and show the three kinds of steering file:
 In the Kiro chat, choose **Spec**, then paste:
 
 ```
-A shopping cart API. Start with "add items to cart" only: add a product with a quantity, and view the cart with its lines, item count and subtotal. Keep it an MVP: at most 5 tasks, no optional tasks.
+An idea list API for staff. Start with "submit an idea" only: submit an idea with a title and a description, and list all ideas, newest first. Keep it an MVP: at most 5 tasks, no optional tasks.
 ```
 
 Walk through what comes back:
 
-- `requirements.md`: user stories and acceptance criteria in **EARS** form (`WHEN … THE SYSTEM SHALL …`). Point out one decision Kiro made that nobody asked for.
+- `requirements.md`: requirements with acceptance criteria in **EARS** form (`WHEN … THE SYSTEM SHALL …`). Point out one decision Kiro made that nobody asked for (a title length limit, trimming spaces, the order of two ideas sent in the same second).
 - `design.md`: the three Clean Architecture layers, taken from `tech.md` and `structure.md`.
 - `tasks.md`: a short list, each task linked to the requirements it covers.
 
@@ -46,7 +46,7 @@ Click **Start task** on task 1 only. While it runs, say:
 
 That's the link to the "more agents, more tokens" slide.
 
-### 4. Hand over to AI-DLC (2 minutes)
+### 4. Point ahead (2 minutes)
 
 | Spec mode | AI-DLC |
 |---|---|
@@ -55,8 +55,8 @@ That's the link to the "more agents, more tokens" slide.
 | Feedback in chat | Answers in files, with an audit trail in `aidlc-docs/audit.md` |
 | Fast for a clear, small change | Better when the requirements are unclear or people disagree |
 
-Then: "Now you'll build a real version of this, where the stakeholders don't agree."
+Then: "Later you'll build a real version of this, Pelita Ideas, twice: first in spec mode, then with AI-DLC, where the stakeholders don't agree."
 
 ## Fallback
 
-`finished-spec/` holds a complete, lean `requirements.md`, `design.md` and `tasks.md` (4 tasks) for the same generic cart. Open them if live generation is slow.
+`finished-spec/` holds a complete, lean `requirements.md`, `design.md` and `tasks.md` (4 tasks) for the same generic idea list. Open them if live generation is slow.
