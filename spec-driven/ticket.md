@@ -1,4 +1,4 @@
-# The ticket: Pelita Ideas portal
+# The ticket: Lumen Ideas portal
 
 Raised by **Aina Rahman, Head of Innovation**. This is the ticket as the innovation team wrote it. It is short on purpose: the details live in `stakeholder-notes.md`.
 

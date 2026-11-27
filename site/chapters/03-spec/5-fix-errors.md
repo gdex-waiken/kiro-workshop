@@ -1,6 +1,6 @@
-# 5.5 Fix errors
+# Take-home: fix errors
 
-**About 10 minutes.**
+**Take-home, about 10–20 minutes.** Do this after the workshop if you want to see the spec build all the way to running code.
 
 ## Why some steps fail, whatever you do
 
@@ -39,7 +39,7 @@ check_ideas.py fails step 4: "a blank title", expected status 422 and no new ide
 
 ::: tip Prompt: the service won't start
 ```text
-uvicorn app.main:app --port 8000 fails with this error: <paste the error>. Find the cause, fix it, and tell me the command to start the service.
+python -m uvicorn app.main:app --port 8000 fails with this error: <paste the error>. Find the cause, fix it, and tell me the command to start the service.
 ```
 :::
 
@@ -62,4 +62,4 @@ If you change code yourself, tell Kiro what you changed, so the spec and the cod
 Tips and troubleshooting adapted from the AWS workshop *Kiro – Getting Started*, Code Challenge.
 :::
 
-**Break: 11:20 – 11:35.** Then [Chapter 6: AI-DLC](../06-ai-dlc/).
+Compare your result with the AI-DLC build from [Chapter 6](../06-ai-dlc/).

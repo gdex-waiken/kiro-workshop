@@ -1,10 +1,10 @@
-# Vision: Pelita Ideas
+# Vision: Lumen Ideas
 
-> Pelita Group is a fictional logistics company in Malaysia. Every company, person and quote in this workshop is invented.
+> Velox Group is a fictional logistics company in Malaysia. Every company, person and quote in this workshop is invented.
 
 ## Why we are building this
 
-Pelita Group asks staff for improvement ideas, but today they arrive by email, in WhatsApp groups and in corridor chats. The business wants three problems gone:
+Velox Group asks staff for improvement ideas, but today they arrive by email, in WhatsApp groups and in corridor chats. The business wants three problems gone:
 
 1. **Ideas get lost.** Nobody can see what has already been suggested, so good ideas disappear in inboxes.
 2. **The same idea arrives again and again.** Last quarter "reusable parcel bags" was sent in five times by five people.

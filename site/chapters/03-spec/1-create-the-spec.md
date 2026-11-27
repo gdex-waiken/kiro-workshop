@@ -1,12 +1,12 @@
-# 5.1 Create the spec
+# 3.1 Create the spec
 
-**About 10 minutes.**
+**10:10 – 10:15 · We do it together.** The trainer does each step on the big screen; do it at the same time. Same teams all morning: the **Driver** types.
+
+::: warning Don't touch any settings yet
+Use Kiro exactly as it is after Session 0. Don't turn anything on or off, including Workflows. You change one setting together at 11:00, just before AI-DLC.
+:::
 
 ## Open the workspace
-
-```bash
-git clone https://github.com/gdex-waiken/kiro-workshop.git
-```
 
 Open the **`kiro-workshop/spec-driven`** folder, not the repo root, so Kiro only sees this part's files and rules.
 
@@ -32,7 +32,7 @@ Open the **`kiro-workshop/spec-driven`** folder, not the repo root, so Kiro only
 cd kiro-workshop/spec-driven
 kiro-cli
 # inside Kiro CLI:
-/spec new pelita-ideas
+/spec new lumen-ideas
 # then choose: Build a Feature → Requirements, and paste the prompt below
 ```
 
@@ -42,17 +42,17 @@ kiro-cli
 
 ::: tip Copy this
 ```text
-Build the Pelita Ideas service described in ticket.md and api-contract.md. Feature 1 only: submit an idea, list every idea newest first, and open one idea. Submitter names and departments come from sample-data/staff.csv, and categories from sample-data/categories.csv. The service must pass check_ideas.py. Keep it an MVP: at most 5 tasks, no optional tasks.
+Build the Lumen Ideas service described in ticket.md and api-contract.md. Feature 1 only: submit an idea, list every idea newest first, and open one idea. Submitter names and departments come from sample-data/staff.csv, and categories from sample-data/categories.csv. The service must pass check_ideas.py. Keep it an MVP: at most 5 tasks, no optional tasks.
 ```
 :::
 
 ## What you should see
 
-- A new folder: `.kiro/specs/pelita-ideas/` (the name may differ).
+- A new folder: `.kiro/specs/lumen-ideas/` (the name may differ).
 - `requirements.md` opens in the editor, and Kiro stops to ask you to review it.
 
 ::: warning Kiro is not asking about stakeholders
-Notice what Kiro does **not** ask: how long a title may be, what happens when it's too long, or whether two ideas can share a title. Spec mode drafts first and lets you correct. Keep that in mind for Chapter 6.
+Notice what Kiro does **not** ask: how long a title may be, what happens when it's too long, or whether two ideas can share a title. Spec mode drafts first and lets you correct. That's what your team hunts for next.
 :::
 
-**Next:** [5.2 Review the requirements](./2-requirements)
+**Next:** [3.2 Hunt for the gaps](./2-requirements)

@@ -1,6 +1,6 @@
 # Technical environment
 
-The platform standards for every Pelita Group service. Your Application Design must follow them. If the AI proposes something this page prohibits, reject it at the gate and point to the rule.
+The platform standards for every Velox Group service. Your Application Design must follow them. If the AI proposes something this page prohibits, reject it at the gate and point to the rule.
 
 ## Platform standards
 
@@ -26,7 +26,7 @@ The platform standards for every Pelita Group service. Your Application Design m
 ## How the service is checked
 
 ```bash
-uvicorn app.main:app --port 8000          # in one terminal
+python -m uvicorn app.main:app --port 8000          # in one terminal
 python check_ideas.py                     # in another: Feature 1
 python check_ideas.py --feature 2         # once Feature 2 is built
 ```

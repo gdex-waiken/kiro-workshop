@@ -4,43 +4,43 @@ layout: home
 hero:
   name: Kiro Developer Workshop
   text: One idea portal, three ways
-  tagline: Sweetmag AWS Kiro Training · Wed 9 Dec, 9:30 AM – 1:30 PM (GMT+8). A 4-hour hands-on morning. Build Pelita Ideas, a staff idea portal, with spec-driven development, then again with AI-DLC, then add a second feature to the code you already have.
+  tagline: Sweetmag AWS Kiro Training · Wed 9 Dec, 9:30 AM – 1:30 PM (GMT+8). Give Kiro documents, not one-liners. Plan with a spec, build with AI-DLC, change existing code, and trace every line back to the person who asked for it.
   image:
     src: /images/kiro-ghost.png
     alt: The Kiro ghost
   actions:
     - theme: brand
-      text: Start with chapter 1
-      link: /chapters/01-meet-kiro
+      text: Session 0 · Setup
+      link: /chapters/00-setup
     - theme: alt
-      text: Before you start
-      link: /chapters/00-before-you-start
+      text: Every prompt
+      link: /chapters/prompts
 
 features:
   - icon:
       src: /images/icon-ide.png
-    title: 1–3 · Meet, extend, compare
-    details: The Kiro IDE and Crew in depth, a spec demo, MCP, skills and powers, and when to vibe, spec or use AI-DLC.
+    title: 1–2 · Meet Kiro
+    details: The Kiro IDE and Crew in depth, the building blocks, and which one to use for which job.
     link: /chapters/01-meet-kiro
   - icon:
       src: /images/icon-web.png
-    title: 4 · The scenario
-    details: Pelita Group, a logistics firm, wants one place for staff ideas. Read the proposal, the ticket, the contract and the rules.
-    link: /chapters/04-the-scenario
+    title: 3 · Spec, hands-on
+    details: Turn the client's Word brief into steering, then into requirements, and hunt for the decisions nobody made.
+    link: /chapters/03-spec/
   - icon:
       src: /images/icon-cli.png
-    title: 5 · Spec-driven development
-    details: Kiro writes requirements, design and tasks. You approve each one, then it builds Feature 1.
-    link: /chapters/05-spec/
+    title: 4–5 · Who asks the questions?
+    details: From AI-assisted to AI-DLC, then the six stakeholders behind Lumen Ideas, who don't agree.
+    link: /chapters/05-scenario
   - icon:
       src: /images/icon-crew.png
     title: 6 · AI-DLC
-    details: Kiro leads, asks questions in files, and stops at a gate before every stage. Feature 1 again, from scratch.
+    details: Kiro leads, asks questions in files and stops at a gate after every stage. Build Feature 1 from an empty folder.
     link: /chapters/06-ai-dlc/
   - icon:
       src: /images/icon-mobile.png
-    title: 7–8 · Brownfield, wrap up
-    details: Add voting and ranking to the code you just built, then prove it, trace it, and roll it out to the team.
+    title: 7–8 · Brownfield, show and trace
+    details: Add voting to the code you just built, prove both features pass, and walk one line of code back to a stakeholder.
     link: /chapters/07-brownfield
 ---
 
@@ -48,21 +48,26 @@ features:
 
 **Sweetmag AWS Kiro Training · Wednesday 9 December · 9:30 AM – 1:30 PM (GMT+8)**
 
-| Time | Chapter | Format |
+Before the day: [Session 0 · Setup](/chapters/00-setup), Mon 7 Dec, 30 minutes online.
+
+| Time | Block | Format |
 |---|---|---|
-| 9:30 – 9:50 | [1 · Meet Kiro](/chapters/01-meet-kiro) | Talk and demo |
-| 9:50 – 10:00 | [2 · Extend Kiro](/chapters/02-extend-kiro) | Demo |
-| 10:00 – 10:10 | [3 · Vibe, spec or AI-DLC?](/chapters/03-compare) | Discussion |
-| 10:10 – 10:20 | [4 · The scenario: Pelita Ideas](/chapters/04-the-scenario) | Talk |
-| 10:20 – 11:20 | [5 · Spec-driven development](/chapters/05-spec/) | **Hands-on, 1 hour** |
-| 11:20 – 11:35 | Break | |
-| 11:35 – 12:35 | [6 · AI-DLC, greenfield](/chapters/06-ai-dlc/) | **Hands-on, 1 hour** |
-| 12:35 – 12:50 | Break | |
-| 12:50 – 1:15 | [7 · Brownfield: add Feature 2](/chapters/07-brownfield) | **Hands-on, 25 minutes** |
-| 1:15 – 1:30 | [8 · Wrap-up](/chapters/08-wrap-up) | Talk and Q&A |
+| 9:30 | Open: one prompt, one surprise | Demo |
+| 9:40 | [1–2 · Meet Kiro](/chapters/01-meet-kiro) | Talk and demo |
+| 10:00 | [3 · Spec](/chapters/03-spec/): the trainer shows it, then you try it | **Hands-on 1, 30 min** |
+| 10:30 | [4 · Who asks the questions?](/chapters/04-bridge) | Talk |
+| 10:40 | Break | |
+| 10:50 | [5 · The stakeholders](/chapters/05-scenario) | Talk |
+| 11:00 | [6 · AI-DLC, greenfield: Feature 1](/chapters/06-ai-dlc/) | **Hands-on 2, 50 min** |
+| 11:50 | Checkpoint: two teams run the checker on screen | Show |
+| 12:00 | Break | |
+| 12:10 | [7 · Brownfield: Feature 2](/chapters/07-brownfield) | **Hands-on 3, 40 min** |
+| 12:50 | [8 · Show and trace](/chapters/08-wrap-up) | Show |
+| 1:10 | [8 · Roll it out, Q&A](/chapters/08-wrap-up#roll-it-out) | Talk |
 
 ## How to use this site
 
-- **Follow it chapter by chapter.** Each hands-on page ends with the prompt for that step, ready to copy.
-- **Kiro IDE or Kiro CLI?** Wherever the two differ, pick your tool in the tabs.
+- **Listen first, then build.** The trainer explains each idea in the room. This site carries the steps and the prompts, so you're not reading while Kiro waits.
+- **Every hands-on starts together.** The trainer does step 1 on the big screen, the room does it together, then your team carries on.
+- **Every prompt is ready to copy.** All of them, in order, are on [one page](/chapters/prompts).
 - **Everything runs on your laptop.** No cloud account, no database, no Docker.

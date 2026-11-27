@@ -1,6 +1,6 @@
-# 5.3 Review the design and the tasks
+# Take-home: review the design and the tasks
 
-**About 10 minutes.**
+**Take-home, about 10–20 minutes.** Do this after the workshop if you want to see the spec build all the way to running code.
 
 ## design.md
 
@@ -40,7 +40,7 @@ Or run all required tasks at once.
 
 ```text [Kiro CLI]
 Choose "Run required tasks" at the review question.
-Resume later with:  /spec run pelita-ideas
+Resume later with:  /spec run lumen-ideas
 ```
 
 :::
@@ -49,4 +49,4 @@ Resume later with:  /spec run pelita-ideas
 You see what each task changes, and what it costs. Running everything at once on a long plan recreates the "more agents, more tokens" problem from [Chapter 2](../02-extend-kiro).
 :::
 
-**Next:** [5.4 Build and check](./4-build-and-check)
+**Next:** [Build and check](./4-build-and-check)

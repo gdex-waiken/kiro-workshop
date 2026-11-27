@@ -20,5 +20,5 @@ tests/               # mirrors app/: domain, application, adapters
 
 ## Run commands
 - Tests: `pytest`
-- Service: `uvicorn app.main:app --port 8000`
+- Service: `python -m uvicorn app.main:app --port 8000`
 - Answer key: `python check_ideas.py` (with the service running)

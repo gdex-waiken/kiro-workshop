@@ -1,6 +1,6 @@
 # 1. Meet Kiro
 
-**9:30 – 9:50 · Talk and demo.** By the end of this chapter you know which Kiro to open for which job, and you've seen a spec go from prompt to task list.
+**9:40 – 10:00 · Talk and demo.** By the end of this chapter you know which Kiro to open for which job and what each building block is for. Listen now; this page is here to read again later.
 
 <img src="/images/kiro-ghost.png" alt="The Kiro ghost" class="mascot-float" />
 
@@ -34,21 +34,23 @@ A desktop editor built on a VS Code foundation. It's where you'll work today.
 
 ## Kiro Crew: a workspace that keeps working
 
-IDE, CLI and Web handle one session while you drive. **Crew carries the work across sessions**: it remembers, runs on a schedule, and keeps working when no chat is open. It's open source (Apache 2.0), runs on the Kiro CLI and reads your `.kiro/` setup.
+IDE, CLI and Web handle one session while you drive. **Crew carries the work across sessions**: it remembers, runs on a schedule, and keeps working when no chat is open. It's open source (Apache 2.0), runs on the Kiro CLI by default and reads your project's `.kiro/steering/` files.
 
 | Crew can | How |
 |---|---|
 | Work in parallel | Sessions and subagents that report back |
 | Run on a schedule | Cron jobs and heartbeats that watch PRs and pipelines |
+| Run a spec unattended | Task Runner: plans, runs, tests, retries and checkpoints |
 | Remember | Teach a rule once; every future session applies it |
-| Be reached | Dashboard, Slack, Telegram, Discord, Teams |
+| Use a browser and your desktop | Browser control, and computer use on macOS and Windows (off by default) |
+| Be reached | Desktop app, dashboard, CLI, Slack, Telegram, Discord, Teams, Webex and more |
 
 ### Many agents, one workspace
 
 | Level | What it is |
 |---|---|
 | **Subagents** | Parallel helpers inside one chat. Each has its own session and context, then reports back |
-| **Crew agents** | Specialists with their own prompt, model and tools. No memory of their own |
+| **Agents** | Reusable specialists: a model, a system prompt, tools and MCP servers |
 | **Bots** | Persistent, named agents with their own thread, memory, workspace and goals |
 | **Apps** | Packages that add agents, skills, MCP servers and schedules in one install |
 
@@ -64,7 +66,8 @@ A **bot** is a conductor: it does short tasks itself, briefs **workers** for lon
 |---|---|
 | **Kiro CLI** | The same agent in your terminal: over SSH, in scripts, or as a headless step in a CI/CD pipeline |
 | **Kiro Web** | A browser agent at **app.kiro.dev**: hand over a task, get a pull request back from an isolated sandbox |
-| **Kiro Mobile** | Check on tasks, review pull requests and read a session's spec files on the go |
+| **Kiro Mobile** | Start and follow sessions, reply to the agent and track pull requests on the go |
+| **Kiro for VS Code** | The Kiro agent inside Visual Studio Code, with the same specs, steering and MCP setup |
 
 ::: details More on Kiro CLI and Kiro Web
 **Kiro CLI**
@@ -76,7 +79,9 @@ curl -fsSL https://cli.kiro.dev/install | bash
 kiro-cli
 ```
 
-The first time you start it in a folder, Kiro asks whether to trust the workspace. Trust only folders you mean Kiro to work in.
+On Windows, install from PowerShell with `irm 'https://cli.kiro.dev/install.ps1' | iex`.
+
+The first time you start it in a folder, Kiro asks whether to trust the workspace. Until you trust it, Kiro doesn't load that folder's steering, skills, custom agents or MCP servers. Trust only folders you mean Kiro to work in.
 
 **Kiro Web**
 
@@ -104,18 +109,18 @@ You can also start work from GitHub: add the `kiro` label to an issue, or commen
 | Say "come back with a pull request" | **Kiro Web**, autonomous mode |
 | Keep something watched and reported on for days | **Kiro Crew** |
 
-## Demo: a spec, from prompt to task list
+## Next: a spec, from prompt to task list
 
-The facilitator builds a small spec live in Kiro IDE, so you've seen the whole flow once before you run it yourselves in [Chapter 5](./05-spec/).
+At 10:00 the trainer builds a small spec live in Kiro IDE, so you've seen the whole flow once before you try it yourselves in [Chapter 3](./03-spec/).
 
 | Step | What to watch for |
 |---|---|
-| **Steering** | The `.kiro/steering/` files Kiro reads with every request |
+| **Steering** | The `.kiro/steering/` files. By default, each one goes into every request |
 | **Requirements** | `requirements.md` in `WHEN … THE SYSTEM SHALL …` form, and Kiro stopping for review |
 | **Design** | `design.md`, with each decision pointing back to a requirement |
 | **Tasks** | A short `tasks.md`, each task linked to the requirements it covers |
 
-The finished reference spec is in the repo's `spec-demo/` folder if you want to read it afterwards.
+The trainer starts from the client's Word brief and turns it into steering first, so you see where steering files come from.
 
 ::: tip Try it
 Open Kiro IDE and ask the chat:
@@ -126,5 +131,5 @@ In two sentences, what can you do in this workspace, and which steering files ha
 :::
 
 ::: info Sources
-kiro.dev/docs · kiro.dev/docs/ide · kiro.dev/docs/cli · kiro.dev/docs/web · kiro.dev/docs/web/autonomous-mode · kiro.dev/crew · kiro.dev/docs/crew/bots. Product images: kiro.dev.
+kiro.dev/docs · kiro.dev/docs/ide · kiro.dev/docs/custom-agents/built-in · kiro.dev/docs/specs/feature-specs · kiro.dev/docs/steering · kiro.dev/docs/cli · kiro.dev/docs/permissions · kiro.dev/docs/web · kiro.dev/docs/web/autonomous-mode · kiro.dev/docs/web/github · kiro.dev/docs/mobile · kiro.dev/crew · kiro.dev/docs/crew/features · kiro.dev/docs/crew/bots. Product images: kiro.dev.
 :::

@@ -1,57 +1,47 @@
-# 6.3 Plan and design
+# 6.3 Trim the plan
 
-**12:00 – 12:15 · Checkpoint 2 at 12:15.**
+**11:19 – 11:27 · Checkpoint 2 at 11:27.**
 
-## Every stage ends at a gate
+## Gate 2 · The code plan
 
-Kiro does the work, writes a file to `aidlc-docs/`, prints **REVIEW REQUIRED**, and waits. You choose **Request Changes** or **Continue**.
+About 2 minutes after you approve the requirements, Kiro writes:
 
-A gate you click without reading is a gate you didn't use. The Reviewer opens every file it points to.
-
-::: tip Prompt: continue after you've read the files
 ```text
-proceed
+aidlc/spaces/default/intents/<date>-<name>/construction/code-generation/code-generation-plan.md
+```
+
+and stops with choices including **Approve Plan** and **Request Changes**. No code exists yet. This is the cheapest moment to say no.
+
+## AI over-builds. Delete what nobody asked for
+
+The Reviewer reads the plan's steps aloud. For each one, the team asks: **which line in the ticket or the contract asked for this?**
+
+| What a plan may include | Your call |
+|---|---|
+| Submit, list newest first, open one idea | Keep: in the ticket |
+| Tests written before the code | Keep: `technical-environment.md` says test-first. If the plan writes tests after the code, request a change |
+| An extra test file for architecture rules, or 25+ tests | Trim: about one test per requirement is enough today |
+| Voting or rankings | Not now: Feature 2, after the break |
+| A database, Docker, login, an AI call, a new endpoint | Delete: `technical-environment.md` prohibits them |
+
+Plans differ from run to run. In one reference run Kiro planned an extra architecture-test file and about 25 tests, and the team cut both; in another the plan had nothing to cut but wrote tests after the code. Note how many tests the plan promises: you'll compare at the next gate.
+
+::: tip Prompt · Change the plan
+```text
+Request changes: <what to remove or change> because <the ticket or rule it breaks>. The rest of the plan is fine.
 ```
 :::
 
-## Trim the plan
+Kiro revises the plan in about a minute and shows the same choices. Then:
 
-**AI over-builds.** Ask for an idea list and it may plan login, comments, an admin page, a database and AI tagging. Delete everything the ticket didn't ask for, at the gate.
-
-| What Kiro might plan | Your call |
-|---|---|
-| Submit an idea | Keep: in the ticket |
-| List ideas newest first, open one idea | Keep: in the ticket |
-| Vote and rank | Later: Feature 2, in [Chapter 7](../07-brownfield) |
-| Login and user accounts | Delete: out of scope |
-| Comments, editing, attachments | Delete: out of scope |
-| An admin page | Delete: nobody asked for it |
-| AI tagging or summaries | Delete: out of scope, and no calls to outside services |
-| A database | Delete: prohibited |
-
-::: tip Prompt: request changes to the plan
+::: tip Prompt 4 · Approve the plan
 ```text
-Request changes: remove <stage or task> from the execution plan. It isn't in ticket.md, and technical-environment.md prohibits it. Keep Feature 1 only, with one unit.
+Approve Plan
 ```
 :::
 
-## Approve a small design
-
-| Check | Look for |
-|---|---|
-| Three layers | `domain`, `application`, `adapters` |
-| Time | `submitted_at` in UTC, ISO 8601, ending in `Z` |
-| Reference data | Names and departments come from `staff.csv`, never from the client. Categories from `categories.csv` |
-| Storage | In memory, behind a repository interface |
-| Your decisions | The 80-character limit, the duplicate rule and the fixed category list each appear in the design |
-| Nothing prohibited | No database, Docker, login, outside calls or new endpoint |
-
-## Code generation is gated twice
-
-First Kiro shows a **code-generation plan**, and only after you approve it does it write code. Check the plan as carefully as the code: a wrong approach is cheapest to fix here.
-
-::: info Checkpoint 2 (12:15)
-You deleted or questioned at least one thing in the plan, and said why at the gate. The design has no database, Docker or login.
+::: info Checkpoint 2 (11:27)
+You removed or questioned at least one thing in the plan, and said why. The Scribe noted it in `team-log.md` under **Gates**.
 :::
 
-**Next:** [6.4 Construction](./4-construction)
+**Next:** [6.4 Build and check](./4-construction)

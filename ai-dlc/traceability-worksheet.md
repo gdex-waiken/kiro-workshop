@@ -2,13 +2,14 @@
 
 Pick a result that `check_ideas.py` checks and walk it back to the sentence that caused it. One complete chain is the goal; two is great.
 
+`<record>` is your workflow's folder: `aidlc/spaces/default/intents/<date>-<name>/`. Feature 2 has its own.
+
 ```
 a result you can point at
   └─ the test that would fail if the decision flipped
-      └─ the design decision
-          └─ the requirement
-              └─ the answer you typed in a question file
-                  └─ the sentence a stakeholder said
+      └─ the requirement
+          └─ your answer in the question file, or the decisions table
+              └─ the sentence a stakeholder said
 ```
 
 ## Chain 1
@@ -17,9 +18,8 @@ a result you can point at
 |---|---|---|
 | The result | `ideas-scenario.csv` or `votes-scenario.csv`, step | |
 | The test | | |
-| The design decision | `aidlc-docs/...` | |
-| The requirement | `aidlc-docs/...` | |
-| Your answer | `aidlc-docs/...` question file | |
+| The requirement | `<record>/inception/requirements-analysis/requirements.md` | |
+| Your answer | `<record>/inception/requirements-analysis/requirements-analysis-questions.md`, or the decisions table in `requirements.md` | |
 | The stakeholder sentence | `stakeholder-notes.md` | |
 
 Where did the chain break, if anywhere?
@@ -30,9 +30,8 @@ Where did the chain break, if anywhere?
 |---|---|---|
 | The result | `ideas-scenario.csv` or `votes-scenario.csv`, step | |
 | The test | | |
-| The design decision | `aidlc-docs/...` | |
-| The requirement | `aidlc-docs/...` | |
-| Your answer | `aidlc-docs/...` question file | |
+| The requirement | `<record>/inception/requirements-analysis/requirements.md` | |
+| Your answer | `<record>/inception/requirements-analysis/requirements-analysis-questions.md`, or the decisions table in `requirements.md` | |
 | The stakeholder sentence | `stakeholder-notes.md` | |
 
 Where did the chain break, if anywhere?

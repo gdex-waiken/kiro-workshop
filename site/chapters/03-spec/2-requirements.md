@@ -1,6 +1,10 @@
-# 5.2 Review the requirements
+# 3.2 Hunt for the gaps
 
-**About 10 minutes.** The Reviewer reads `requirements.md` aloud; the Product Owner decides.
+**10:15 – 10:27 · Your team.** The Reviewer reads `requirements.md` aloud; everyone hunts.
+
+::: tip The race
+The first team to post **three decisions the ticket doesn't settle** in the chat, each with the line in `requirements.md` where Kiro guessed, wins. Examples of the kind of thing to look for: what makes two ideas "the same", what happens to a title that's too long.
+:::
 
 ## Every criterion has the same shape
 
@@ -33,10 +37,15 @@ Update requirements.md: remove anything not in ticket.md or api-contract.md, and
 ```
 :::
 
-::: tip Prompt: move on
+## Stop here
+
+Leave the spec where it is. At 10:27 two teams share what they found; the trainer writes the list on the board. You'll see the same questions again at 11:00, asked by AI-DLC.
+
+::: details Take-home: carry on to the build
 ```text
 The requirements look good. Continue to the design phase.
 ```
+Then follow [design and tasks](./3-design-and-tasks), [build and check](./4-build-and-check) and [fix errors](./5-fix-errors).
 :::
 
-**Next:** [5.3 Design and tasks](./3-design-and-tasks)
+**Next:** [4. Who asks the questions?](../04-bridge)

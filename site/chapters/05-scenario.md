@@ -1,26 +1,26 @@
-# 4. The scenario: Pelita Ideas
+# 5. The stakeholders: who decides?
 
-**10:10 – 10:20 · Talk.** You'll build one small service three times over this morning: Feature 1 with a spec, Feature 1 again with AI-DLC, then Feature 2 added to that AI-DLC code.
+**10:50 – 11:00 · Talk.** You met the project at 10:00: the client's brief, the ticket, the contract. Now you meet the six people behind it, and they don't agree. You'll build Feature 1 with AI-DLC, then add Feature 2 to that code.
 
 ## The company and the problem
 
-Pelita Group is a fictional logistics company in Malaysia. It asks staff for improvement ideas, but they arrive by email, in WhatsApp groups and in corridor chats. Three things go wrong:
+Velox Group is a fictional logistics company in Malaysia. It asks staff for improvement ideas, but they arrive by email, in WhatsApp groups and in corridor chats. Three things go wrong:
 
 1. **Ideas get lost.** Nobody can see what was already suggested.
 2. **The same idea arrives again and again.** "Reusable parcel bags" came in five times last quarter.
 3. **Nobody knows why an idea was picked.** Staff want to see which ideas their colleagues back.
 
-The app team has already designed the portal screens against a fixed API. You build the service behind it: **Pelita Ideas**.
+The app team has already designed the portal screens against a fixed API. You build the service behind it: **Lumen Ideas**.
 
 ## The brief from Product
 
-Aina Rahman, Head of Innovation, sent a one-page proposal: **`Pelita-Ideas-Proposal.pdf`**, in both workshop folders. It has the summary, the problems, who uses the portal, the scope for each part, what is out of scope, the constraints and what "done" means.
+Aina Rahman, Head of Innovation, sent the client's brief: **`Lumen-Ideas-Client-Brief.docx`**, in both workshop folders. You met it at 10:00 when it became `product.md`. It covers business needs only: the problems, who uses the portal, the scope, what's out, and who to talk to.
 
 ::: tip Hand Kiro documents, not a one-line prompt
-On a real project nobody gets a one-sentence request. You get a proposal, a ticket, a contract and some standards. Today you work the same way: point Kiro at the documents and let it read them. The better the documents, the less Kiro has to guess.
+On a real project nobody gets a one-sentence request. You get a client brief, a ticket, a contract and some standards. Today you work the same way: point Kiro at the documents and let it read them. The better the documents, the less Kiro has to guess.
 :::
 
-The proposal ends with a warning worth reading twice: questions on **title length, duplicates, anonymous ideas and voting rules** are still being discussed with Design, People and Culture, Operations and Finance.
+The brief ends with a warning worth reading twice: questions on **title length, duplicates, anonymous ideas and voting rules** are still being discussed with Design, People and Culture, Operations and Finance.
 
 ## The ticket
 
@@ -28,14 +28,14 @@ The ticket is short on purpose. Two features, built one at a time.
 
 | Feature | What it does | When |
 |---|---|---|
-| **1 · Submit and browse ideas** | A staff member submits an idea with a title, a short description and a category. The portal lists every idea, newest first, with who submitted it and their department. Anyone can open one idea and see all its details | Chapters 5 and 6 (greenfield) |
+| **1 · Submit and browse ideas** | A staff member submits an idea with a title, a short description and a category. The portal lists every idea, newest first, with who submitted it and their department. Anyone can open one idea and see all its details | Chapter 3 (spec, requirements only) and Chapter 6 (AI-DLC, greenfield) |
 | **2 · Vote and rank** | A staff member votes for an idea. Each idea shows its vote count. The portal shows a ranked list, most votes first | Chapter 7 (brownfield: added to the code you already have) |
 
 ## The files you'll use
 
 | File | In `spec-driven/` | In `ai-dlc/` | What it is |
 |---|:---:|:---:|---|
-| `Pelita-Ideas-Proposal.pdf` | ✓ | ✓ | **The brief from Product:** scope, constraints, done means |
+| `Lumen-Ideas-Client-Brief.docx` | ✓ | ✓ | **The brief from Product:** scope, constraints, done means |
 | `ticket.md` | ✓ | ✓ | The two features and their acceptance criteria |
 | `api-contract.md` | ✓ | ✓ | The fixed API: paths, fields, status codes |
 | `sample-data/` | ✓ | ✓ | `staff.csv`, `categories.csv` and **the answer keys** (`ideas-scenario.csv`, `votes-scenario.csv`) |
@@ -47,13 +47,13 @@ The ticket is short on purpose. Two features, built one at a time.
 | `team-log.md`, `traceability-worksheet.md` | | ✓ | You fill these in |
 
 ::: warning Spec mode gets less, on purpose
-The `spec-driven/` folder has no stakeholder notes. Spec mode builds from what you give it, so expect it to miss a few steps on the checker. In Chapter 6, AI-DLC builds the same feature and asks the questions the spec never asked.
+The `spec-driven/` folder has no stakeholder notes. Spec mode builds from what you give it, which is why your requirements in Chapter 3 had gaps. In Chapter 6, AI-DLC builds the same feature and asks the questions the spec never asked.
 :::
 
 ## How you'll know it works
 
 ```bash
-uvicorn app.main:app --port 8000      # terminal 1: your service
+python -m uvicorn app.main:app --port 8000      # terminal 1: your service
 python check_ideas.py                 # terminal 2: Feature 1, 13 steps
 python check_ideas.py --feature 2     # Feature 2, 14 steps (Chapter 7)
 ```
@@ -109,5 +109,5 @@ Teams of 3–4, one laptop per team. Swap the Driver at each break.
 | **Scribe** | Writes down decisions **and why** |
 
 ::: info Sources
-Permission rules: AWS workshop *Kiro – Getting Started*, Labs 10 and 15. Pelita Group and everyone in it are fictional.
+Permission rules: AWS workshop *Kiro – Getting Started*, Labs 10 and 15. Velox Group and everyone in it are fictional.
 :::

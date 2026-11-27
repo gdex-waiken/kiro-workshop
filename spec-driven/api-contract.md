@@ -1,4 +1,4 @@
-# API contract: Pelita Ideas v1
+# API contract: Lumen Ideas v1
 
 Agreed with the app team. **Do not change paths, field names or status codes.**
 

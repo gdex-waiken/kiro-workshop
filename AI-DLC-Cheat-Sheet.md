@@ -1,64 +1,69 @@
 # AI-DLC cheat sheet
 
-> Keep this open all morning. It's the map; `ai-dlc/README.md` is the route.
+> Keep this open all morning. Every prompt, in order, is on the website's **Prompts** page.
 
 ## The golden rule
 
-**Kiro proposes, you approve.** Every stage ends at a gate. Read the files before you choose **Continue**.
+**Kiro proposes, you approve.** Every stage ends at a gate. Read the files before you type **Approve**.
 
-## The stages
+## Every new chat
 
-| Phase | Stage | What it produces | Feature 1 (greenfield) | Feature 2 (brownfield) |
+1. New chat → agent picker → **aidlc**.
+2. Start with `/aidlc express --plan-approval on …` (the full message is on the Prompts page).
+
+## The stages today (`express` scope)
+
+| # | Stage | You check | Feature 1 | Feature 2 |
 |---|---|---|---|---|
-| Inception | Workspace Detection | Spots whether there is existing code | runs: finds nothing | runs: **finds your Feature 1 code** |
-| | Reverse Engineering | Docs for existing code | skipped (no code yet) | **runs: read what it says about your code** |
-| | **Requirements Analysis** | Requirements + the extension question | **runs: the big one** | runs: the voting rules |
-| | User Stories | Stories with acceptance criteria | Kiro may propose it; keep it short | skip or keep it short |
-| | **Workflow Planning** | The execution plan: which stages run or skip | **challenge it** | **challenge it** |
-| | Application Design | Components and boundaries | runs, keep it small | extends the existing design |
-| | Units Generation | Splits work into units | one unit is enough today | one unit is enough |
-| Construction | Functional / NFR design | Detailed design per unit | lean | lean |
-| | **Code Generation** | Code and tests | runs | runs |
-| | **Build and Test** | Full test run, verification | runs, then `check_ideas.py` | runs, then **both** checkers |
+| – | Reverse Engineering | What Kiro thinks your code does | skipped (no code yet) | **gate 1** |
+| 1 | **Requirements Analysis** | Your answers, and the decisions table against `stakeholder-notes.md` | gate 1 | gate 2 |
+| 2 | **Code plan** | Anything the ticket didn't ask for: delete it | gate 2 | gate 3 |
+| 3 | **Code Generation** (8–11 min) | `code-summary.md`: which files changed, how many tests | gate 3 | gate 4 |
+| 4 | **Build and Test** | Run the checker yourselves | gate 4 | gate 5 |
 
-Everything lands in `aidlc-docs/`: `aidlc-state.md` (where you are) and `audit.md` (every question, answer and approval).
+## What you type at a gate
 
-## Trim the plan
-
-AI over-builds. Ask for an idea list and it may plan login, comments, an admin page, a database and AI tagging. Before you approve a plan, **delete everything the ticket didn't ask for**, and say why at the gate. Every task you delete is code you don't have to review, and credits you don't spend.
+| You want to | Type |
+|---|---|
+| Continue | `Approve` (at the code plan: `Approve Plan`) |
+| Change something | `Request changes: <what> because <why>.` |
+| Say your answers are in the file | `done` |
+| See where you are | `/aidlc --status` |
+| Stop for a break / carry on | `/aidlc park` / `/aidlc --resume` (pick **aidlc** in the new chat first) |
 
 ## Question files, not chat
 
-1. Kiro writes questions to a `.md` file with lettered options and an `[Answer]:` tag.
-2. Type your letter (or a short answer) after each tag. Answer **every** question.
-3. Save the file.
-4. Tell Kiro: `I've answered the questions, please proceed`.
+1. Kiro writes questions to `…/inception/requirements-analysis/requirements-analysis-questions.md`.
+2. Type the letter after each `[Answer]:`, then who said so (or `PO decision:` and why, if nobody did).
+3. Save the file, then send `done`.
 
-A vague answer gets a follow-up file. That's the system working.
+## Where the record lives
 
-## Extensions (asked during Requirements Analysis)
+`aidlc/spaces/default/intents/<date>-<name>/`
 
-| Extension | Adds | Today |
-|---|---|---|
-| Security baseline | Security rules checked at every gate | your call: record why |
-| Resiliency | Failure-mode analysis | your call: record why |
-| Property-Based Testing | Generated-input tests | your call: record why |
+| File | Holds |
+|---|---|
+| `project-description.json` | Your request |
+| `aidlc-state.md` | Stages run and skipped |
+| `inception/requirements-analysis/` | Questions, answers, `requirements.md` |
+| `construction/code-generation/` | The plan you approved, `code-summary.md` |
+| `construction/build-and-test/` | Test results |
+| `audit/` | Every question, answer and approval, with a time |
 
-Each one you enable adds work. A "no" only counts if it's written down with a reason.
+Feature 2's Reverse Engineering writes to `aidlc/spaces/default/codekb/<folder-name>/`.
 
 ## Roles (swap the Driver at each break)
 
-**Driver:** types, never answers alone · **Product Owner:** final say, settles conflicts · **Reviewer:** reads every file before a gate · **Scribe:** keeps `team-log.md` live
+**Driver:** types, never answers alone · **Product Owner:** final say · **Reviewer:** reads every file before a gate · **Scribe:** keeps `team-log.md` live
 
 ## Saving credits
 
-- Read the generated files instead of asking Kiro to explain them in chat.
-- Don't ask for optional or stretch work until Feature 1 passes `check_ideas.py`.
-- One session per team. Don't open parallel sessions on the same work.
-- Start a **new** session for Feature 2. Don't drag the whole Feature 1 conversation along.
+- Read the files instead of asking Kiro to explain them in chat.
+- Don't send messages while Kiro is building.
+- New chat for Feature 2. Don't drag the Feature 1 conversation along.
 
 ## Done means
 
-**Feature 1:** `pytest` passes · `check_ideas.py` shows **13/13** · every conflict has a recorded decision · one traceability chain written
+**Feature 1:** `check_ideas.py` shows **13/13** · every disagreement has a recorded decision · one traceability chain written
 
-**Feature 2:** `check_ideas.py --feature 2` shows **14/14** · `check_ideas.py` **still** shows 13/13 · the voting conflicts have recorded decisions
+**Feature 2:** `check_ideas.py --feature 2` shows **14/14** · `check_ideas.py` **still** shows 13/13 · the voting decisions are recorded

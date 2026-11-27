@@ -1,83 +1,45 @@
 # 6. AI-DLC: Kiro leads, people approve
 
-**11:35 – 12:35 · Hands-on, 1 hour · Kiro IDE.** Feature 1 again, from an empty folder: a **greenfield** project. This time Kiro asks before it assumes.
+**11:00 – 12:00 · Hands-on 2 · Kiro IDE.** Build Feature 1 from an empty folder: a **greenfield** project. This time Kiro reads the stakeholder notes, asks what they don't settle, and stops at a gate after every stage.
 
-## Reverse the conversation
+![The AI-DLC loop: AI plans, AI asks, you validate, AI implements](/images/aidlc-loop.svg){.diagram}
 
-In the **AI-assisted** way of working, people do the thinking and prompt the AI task by task. **AI-DLC** (AI-Driven Development Life Cycle) turns that around: the AI proposes the plan, asks the questions and recommends options, and **people approve, choose and decide** at every critical point.
+## What runs today
 
-> Humans set the destination, the intent. AI gives the step-by-step directions, and people keep oversight along the way. — AWS AI-DLC method definition
+We use AI-DLC's **express** scope with the plan gate switched on. Four stages, four gates:
 
-## One loop, repeated for every step
-
-![The AI-DLC loop](/images/aidlc-loop.svg){.diagram}
-
-Every check you make works like a safety net: it catches a wrong turn early, before it snowballs into code. Iterations are called **Bolts**, and they last hours or days instead of weeks.
-
-## From intent to running code
-
-![The AI-DLC core framework](/images/aidlc-framework.png){.figure}
-
-| Artefact | What it is |
-|---|---|
-| **Intent** | A high-level goal: a feature, a business need, a technical outcome |
-| **Unit** | A self-contained, loosely coupled piece of the intent, like an epic |
-| **Bolt** | A short build cycle that delivers a Unit |
-
-## Three phases, nine steps
-
-![The AI-DLC workflow](/images/aidlc-workflow.png){.figure}
-
-| Phase | Team ritual | What happens | Today |
+| # | Stage | Kiro does | You do at the gate |
 |---|---|---|---|
-| **Inception** | Mob Elaboration | Intent → user stories, NFRs, risks, Units and Bolts | Yes |
-| **Construction** | Mob Construction | Domain design → logical design → code and tests | Yes |
-| **Operations** | AI watches, people approve | Deploy, then monitor metrics, logs and incidents | After the workshop |
+| 1 | **Requirements Analysis** | Reads every document, writes a question file, then `requirements.md` | Answer the questions in the file. Check every decision against `stakeholder-notes.md`. **Approve** |
+| 2 | **Code plan** | Writes `code-generation-plan.md`: what it will build and which tests | Delete what the ticket didn't ask for. **Approve Plan** |
+| 3 | **Code Generation** | Writes the code and tests, test-first. About 8 minutes, mostly silent | Read `code-summary.md`. **Approve** |
+| 4 | **Build and Test** | Runs the tests and `check_ideas.py` | Run the checker yourselves. **Approve** |
 
-Each step builds richer context for the next, and every artefact is saved, so the AI (and your teammates) can always find out why something was decided.
-
-## Who does what
-
-<div class="split">
-<div>
-
-| Who | Does |
-|---|---|
-| **AI** | Asks, elaborates, recommends designs, writes code and tests, watches production |
-| **Product Owner and developers** | Set the intent, verify each step, make the decisions |
-
-</div>
-<img src="/images/aidlc-greenfield.png" alt="Who does what in an AI-DLC green-field project" class="figure tall" />
-</div>
-
-## AI-DLC in Kiro
-
-AI-DLC comes as a set of rules from [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows). Copied into `.kiro/steering/`, they turn Kiro into a disciplined teammate: it asks before it assumes, plans before it builds, and stops at a **gate** after every stage. Today we use release **v1.0.1**.
-
-| Stage | Produces | Today |
-|---|---|---|
-| Workspace Detection | Spots existing code | runs: finds none |
-| Reverse Engineering | Documents existing code | skipped here (no code yet), runs in [Chapter 7](../07-brownfield) |
-| **Requirements Analysis** | Requirements and the extension question | the big one |
-| User Stories | Stories with acceptance criteria | keep it short |
-| **Workflow Planning** | Which stages run and which are skipped | **trim it** |
-| Application Design | Components and boundaries | keep it small |
-| **Code Generation** | A plan, then code and tests | gated twice |
-| **Build and Test** | Full test run | then `check_ideas.py` |
+Everything is written under `aidlc/` in your folder: the questions, your answers, every approval. That's the **record**.
 
 ## The plan for this hour
 
 | Time | Page | Checkpoint |
 |---|---|---|
-| 11:35 – 11:45 | [6.1 Set up](./1-set-up) | Welcome message appears |
-| 11:45 – 12:00 | [6.2 Questions and conflicts](./2-inception) | **CP1 12:00:** every conflict has a recorded decision |
-| 12:00 – 12:15 | [6.3 Plan and design](./3-plan-and-design) | **CP2 12:15:** you deleted or questioned something in the plan |
-| 12:15 – 12:35 | [6.4 Construction](./4-construction) · [6.5 The record](./5-the-record) | **CP3 12:35:** `check_ideas.py` result on screen |
+| 11:00 – 11:06 | [6.1 Start the workflow](./1-set-up): turn off Workflows, set up AI-DLC (we do it together) | Kiro is reading your documents |
+| 11:06 – 11:19 | [6.2 Questions and conflicts](./2-inception) | **CP1:** every decision checked against a stakeholder, requirements approved |
+| 11:19 – 11:27 | [6.3 Trim the plan](./3-plan-and-design) | **CP2:** you removed or questioned something in the plan |
+| 11:27 – 11:50 | [6.4 Build and check](./4-construction) · [6.5 Read the record](./5-the-record) | **CP3:** `check_ideas.py` shows 13/13 on your screen |
+| 11:50 – 12:00 | Two teams show their result on the big screen | |
+
+## Roles
+
+| Role | Job right now |
+|---|---|
+| **Driver** | Types into Kiro. Never answers a question alone |
+| **Product Owner** | Decides every answer. Has the final say |
+| **Reviewer** | Opens and reads every file before anyone types Approve |
+| **Scribe** | Writes each decision, the reason and the source in `team-log.md` |
 
 ::: tip Behind schedule?
-Ask the facilitator for a ready-made `aidlc-docs/` up to an approved design, and jump straight to Construction.
+Ask the trainer. Every stage of a finished reference run is tagged in the repo, so your team can jump ahead and still do the trace at the end.
 :::
 
 ::: info Sources
-*AI-Driven Development Lifecycle (AI-DLC) Method Definition*, Raja SP, Amazon Web Services (figures reproduced from it) · AWS workshop *Kiro – Getting Started*, Lab 12 Part 2 · github.com/awslabs/aidlc-workflows
+*AI-Driven Development Lifecycle (AI-DLC) Method Definition*, Raja SP, AWS · AI-DLC user guide, awslabs.github.io/aidlc-workflows (scopes, interaction modes, state and audit) · measured in a reference run of this exercise with `aidlc` 2.11.4
 :::

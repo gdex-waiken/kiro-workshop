@@ -1,6 +1,6 @@
-# 5.4 Build, run and check
+# Take-home: build, run and check
 
-**About 20 minutes.**
+**Take-home, about 10–20 minutes.** Do this after the workshop if you want to see the spec build all the way to running code.
 
 ## Run the tests
 
@@ -20,7 +20,7 @@ Open two terminals in the `spec-driven` folder.
 python -m venv .venv
 # Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn app.main:app --port 8000
+python -m uvicorn app.main:app --port 8000
 ```
 
 ```bash [Terminal 2: the checker]
@@ -49,7 +49,7 @@ Each failing step points at one missing decision: see [5.5](./5-fix-errors). A p
 
 ## Write down what failed
 
-Some steps depend on decisions the spec never had: what counts as the same idea, how long a title may be, and what happens when it's too long. Write each failing step and your guess at the reason in the team's notes. You'll meet these decisions again in Chapter 6.
+Some steps depend on decisions the spec never had: what counts as the same idea, how long a title may be, and what happens when it's too long. Write each failing step and your guess at the reason in the team's notes. These are the decisions AI-DLC asks about in Chapter 6.
 
 | Step | What happened | Why we think it failed |
 |---|---|---|
@@ -59,4 +59,4 @@ Some steps depend on decisions the spec never had: what counts as the same idea,
 `pytest` passes, the service runs, and you know your score on `check_ideas.py`, even if it isn't 13/13.
 :::
 
-**Next:** [5.5 Fix errors](./5-fix-errors)
+**Next:** [Fix errors](./5-fix-errors)

@@ -1,4 +1,4 @@
-"""Replay the answer key against the running Pelita Ideas service.
+"""Replay the answer key against the running Lumen Ideas service.
 
 Usage:
     python check_ideas.py                       # Feature 1: submit and browse (sample-data/ideas-scenario.csv)
