@@ -87,6 +87,10 @@ Kiro can only reach what your credentials and your machine can reach. IAM, devic
 
 In `team-log.md`, then share one item each: **3** things that worked, **3** frictions, **1** thing you'd change before using this on a real project.
 
+## Tell us how it went
+
+Two minutes, name optional: **[the feedback form](https://gdexgroup.sg.larksuite.com/share/base/shrlgWCmkm5LPJ4OcFIsWJctCUh)**, or scan the QR code on the last slide.
+
 ## Clean up
 
 - Stop the service (**Ctrl + C**).
